@@ -91,11 +91,6 @@ function onImagePanoramaLoaded(event) {
 function init() {
 
     container = document.querySelector('#container');
-
-    panorama = new PANOLENS.ImagePanorama('static/images/7CKo4iel2.jfif');
-    panorama.addEventListener('progress', onImagePanoramaLoaded);
-    panorama.load('static/images/7CKo4iel2.jfif');
-
     // create video TV
     var playVideo = false;
 
@@ -174,16 +169,16 @@ function init() {
         controlButtons: ['fullscreen', 'my_video', 'setting']
     });
     entryPanorama = getEntryPanorama();
+    panoramas();
+    panorama = new PANOLENS.ImagePanorama('static/images/o4Bq4iel2.jfif');
+    // panorama.addEventListener('progress', onImagePanoramaLoaded);
+    // panorama.load('static/images/7CKo4iel2.jfif');
     panorama.add(entryPanorama)
     panorama.add(entryPanorama2)
-
+    viewer.add(panorama);
     //viewer.enableControl(1);
     //DoorStart
-    let video_2 = document.getElementById('video_2');
-    const texture_2 = new THREE.VideoTexture(video_2);
-    const material_2 = new THREE.MeshBasicMaterial({
-        map: texture_2
-    });
+
 
     renderer = new THREE.WebGLRenderer({
         antialias: true
@@ -192,32 +187,8 @@ function init() {
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.shadowMap.enabled = true;
 
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        const constraints = {
-            video: {
-                width: 1280,
-                height: 720,
-                facingMode: 'environment'
-            }
-        };
-        navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
-            // apply the stream to the video element used in the texture
-            video_2.srcObject = stream;
-            panoramas();
-
-        }).catch(function(error) {
-            console.error('Unable to access the camera/webcam.', error);
-        });
-    } else {
-        panoramas();
-        console.error('MediaDevices interface not available.');
-    }
-
-
     function panoramas() {
         panoramaDoor = new PANOLENS.ImagePanorama('static/images/7CKo4iel2.jfif')
-        scene.background = texture_2;
-        // video_2.play();
         viewer.add(panoramaDoor);
         // viewer.enableControl(1);
         viewer.setPanorama(panoramaDoor);
@@ -233,6 +204,8 @@ function init() {
             panorama.load('static/images/o4Bq4iel2.jfif');
             isOpenRoom = true;
             rotateAngle = 0;
+            viewer.setPanorama(panorama);
+            panoramaDoor.dispose();
         });
     }
     //DoorEnd

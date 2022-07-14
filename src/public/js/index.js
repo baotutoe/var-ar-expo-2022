@@ -212,6 +212,8 @@ function init() {
         panoramas();
         console.error('MediaDevices interface not available.');
     }
+
+
     function panoramas() {
         panoramaDoor = new PANOLENS.ImagePanorama('static/images/7CKo4iel2.jfif')
         scene.background = texture_2;

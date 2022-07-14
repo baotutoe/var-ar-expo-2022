@@ -215,7 +215,7 @@ function init() {
     function panoramas() {
         panoramaDoor = new PANOLENS.ImagePanorama('static/images/7CKo4iel2.jfif')
         scene.background = texture_2;
-        video_2.play();
+        // video_2.play();
         viewer.add(panoramaDoor);
         // viewer.enableControl(1);
         viewer.setPanorama(panoramaDoor);
@@ -246,18 +246,4 @@ function init() {
     }
     // add farme
 
-}
-
-function setClampTexture(texture) {
-    var callback;
-    if (arguments.length > 1) {
-        callback = arguments[0];
-        texture = arguments[1];
-        callback();
-    }
-    texture.minFilter = THREE.LinearFilter;
-    texture.magFilter = THREE.LinearFilter;
-    this.material.visible = true;
-    this.material.map = texture;
-    this.material.needsUpdate = true;
 }

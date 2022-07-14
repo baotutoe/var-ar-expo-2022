@@ -18,7 +18,7 @@ let rotateAngle = Math.PI;
 checkGyGroIOS();
 
 function checkGyGroIOS() {
-    if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+    if ( typeof( DeviceMotionEvent ) !== "undefined" && typeof( DeviceMotionEvent.requestPermission ) === "function" ) {
         DeviceOrientationEvent.requestPermission()
             .then(permissionState => {
                 if (permissionState === 'granted') {
@@ -42,7 +42,7 @@ function checkGyGroIOS() {
 }
 
 const requestAccess = async(e) => {
-    if (typeof DeviceOrientationEvent === 'undefined' ||
+    if (typeof( DeviceMotionEvent ) !== "undefined" && typeof DeviceOrientationEvent === 'undefined' ||
         !DeviceOrientationEvent.requestPermission) {
         console.log('no DeviceOrientationEvent.requestPermission present.')
         return false

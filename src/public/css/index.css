@@ -1,0 +1,157 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'TDGraphik';
+    src: url("fonts/TD Graphik-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'TDGraphik Light';
+    font-weight: light;
+    src: url("fonts/TD Graphik-Semilight.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'TDGraphik Bold';
+    font-weight: bold;
+    src: url("fonts/TD Graphik-Semibold.otf") format("opentype");
+}
+
+.font-regular {
+    font-family: 'TDGraphik';
+}
+
+.font-light {
+    font-family: 'TDGraphik Light';
+}
+
+.font-bold {
+    font-family: 'TDGraphik Bold';
+}
+
+#container {
+    background-color:black;
+    width: 100%;
+    height: 100%;
+}
+
+.popup {
+    margin: 0px auto;
+    padding: 5px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    /* width: 30%; */
+    position: relative;
+    text-align: center;
+    font-family: TDGraphik;
+    word-break: break-word;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 10ms;
+    /* visibility: hidden; */
+    /* opacity: 0; */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+/* h4 {
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+} */
+
+h4 {
+    margin-bottom: 1;
+    margin-top: 0;
+}
+
+h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .popup {
+        width: 90%;
+    }
+}
+
+.button-62 {
+    background: linear-gradient(to bottom right, #449b3c, #449b3c);
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: TDGraphik;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    z-index: -1;
+}
+
+.button-62:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: #06D85F;
+}
+
+/* .container {
+    position: relative;
+} */

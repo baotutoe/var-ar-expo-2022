@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/index.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="popup" id="nodeviceorientation" style="display:none">
+            <!-- <a class="close" href="#" id="close">&times;</a> -->
+            <h4 class="font-bold">Welcome to the Extended Winner Experience!</h4>
+            <h4 class="font-bold">Bienvenue Ã  lâ€™expÃ©rience bonifiÃ©e des gagnants!</h4>
+            <p class="font-light">Motion/Orientation is not active. <br> Please click button below to request permission.</p>
+            <p class="font-light">Le capteur de mouvement/orientation nâ€™est pas activÃ©.<br> Veuillez cliquer sur le bouton ci-dessous pour demander la permission.</p>
+            <button id="requestaccess" class="button-62 font-regular">Requestio Permission (iOS 13 or higher)<br>
+              Demander la permission (iOS 13 et plus)
+            </button>
+            <p class="font-light"> iOS12: Please Enable device orientation in Settings > Safari > Motion & Orientation Access.<br> iOS 12 : Veuillez activer le capteur de mouvement/orientation de lâ€™appareil sous RÃ©glages > Safari > AccÃ¨s aux mouvements et
+              Ã  l'orientation.
+            </p>
+            <button id="opensettings" class="button-62 font-regular" value="Redirect">Go to Settings<br>
+              Aller Ã  RÃ©glages
+            </button>
+          </div>
+    </div>
+    <div id="my_camera"></div>
+    <input id="snapshot" type=button value="Take Snapshot" onClick="take_snapshot()" hidden="true">
+    <video id="my_video" controls playsinline webkit-playsinline muted loop width="1280" height="720" style="display: none;">
+        <source src="static/images/video_tv_new.mp4" type="video/mp4">
+    </video>
+    <video id="video_2" style="display:none" autoplay playsinline></video>
+    <div id="results"></div>
+
+    <script type="text/javascript" src="static/js/three.min.js"></script>
+    <script type="text/javascript" src="static/js/panolens.min.js"></script>
+    <script type="text/javascript" src="static/js/webcam.min.js"></script>
+    <script type="text/javascript" src="static/js/room1.js"></script>
+    <script type="text/javascript" src="static/js/index.js"></script>
+    <script type="text/javascript" src="static/js/watermark.min.js"></script>
+    <script type="text/javascript" src="static/js/door.js"></script>
+
+
+</body>
+
+</html>

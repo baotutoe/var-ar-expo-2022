@@ -207,6 +207,7 @@ function init() {
 
         }).catch(function(error) {
             console.error('Unable to access the camera/webcam.', error);
+            panoramas();
         });
     } else {
         console.error('MediaDevices interface not available.');

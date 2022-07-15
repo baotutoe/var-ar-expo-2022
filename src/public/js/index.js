@@ -175,12 +175,15 @@ function init() {
     // panorama.addEventListener('progress', onImagePanoramaLoaded);
     // panorama.load('static/images/7CKo4iel2.jfif');
     panorama.add(entryPanorama)
+    panorama.add(room_1)
+    panorama.add(room_2)
+    panorama.add(room_3)
+
     panorama.add(entryPanorama2)
-    viewer.add(panorama);
     //viewer.enableControl(1);
     //DoorStart
     function panoramas() {
-        panoramaDoor = new PANOLENS.ImagePanorama('static/images/7CKo4iel2.jfif')
+        panoramaDoor = new PANOLENS.ImagePanorama('static/images/7CKo4iel2.png')
         viewer.add(panoramaDoor);
         // viewer.enableControl(1);
         viewer.setPanorama(panoramaDoor);
@@ -193,6 +196,7 @@ function init() {
         });
 
         greenDoor.addEventListener('click', function() {
+            viewer.add(panorama);
             panorama.load('static/images/o4Bq4iel2.jfif');
             isOpenRoom = true;
             rotateAngle = 0;
@@ -202,16 +206,6 @@ function init() {
         });
     }
     //DoorEnd
-
-    function getEntryPanorama() {
-
-        var panorama, tiles, shadeHeight, menu_classified, menu3, menu4, menu5
-
-        shadeHeight = 5;
-        panorama = new PANOLENS.EmptyPanorama();
-        return panorama;
-
-    }
     // add farme
 
 }

@@ -15,7 +15,7 @@ let rotateAngle = Math.PI;
 
 //Request Gygro in IOS
 
-// checkGyGroIOS();
+checkGyGroIOS();
 
 function checkGyGroIOS() {
     if ( typeof( DeviceMotionEvent ) !== "undefined" && typeof( DeviceMotionEvent.requestPermission ) === "function" ) {
@@ -60,7 +60,6 @@ const requestAccess = async(e) => {
         })
         .catch(console.error);
 }
-init();
 
 document.getElementById('requestaccess').addEventListener('touchend', async(e) => {
     try {

@@ -208,8 +208,9 @@ function init() {
     panorama.add(room_3)
 
     panorama.add(entryPanorama2)
-    viewer.add(panorama);
     viewer.add(showroom_1);
+    viewer.add(showroom_2);
+    viewer.add(showroom_3);
 
     //viewer.enableControl(1);
     //DoorStart
@@ -234,13 +235,13 @@ function init() {
             container.classList.add('blur');
             isOpenRoom = true;
             rotateAngle = 0;
+            viewer.add(panorama);
             viewer.setPanorama(panorama);
-            panorama.add(ic_showroom_1);
             popup_greenDoor.dispose()
             panoramaDoor.dispose();
         });
 
-        ic_showroom_1.addEventListener('click', function() {
+        room_1.addEventListener('click', function() {
             // handle items of showroom_1
             bar.classList.remove('hide');
             container.classList.add('blur');
@@ -250,18 +251,25 @@ function init() {
             viewer.setPanorama(showroom_1);
             panorama.dispose();
         });
+
+        room_2.addEventListener('click', function() {
+            // handle items of showroom_1
+            bar.classList.remove('hide');
+            container.classList.add('blur');
+            isOpenRoom = true;
+            rotateAngle = 0;
+            viewer.setPanorama(showroom_2);
+            panorama.dispose();
+        });
+        room_3.addEventListener('click', function() {
+            // handle items of showroom_1
+            bar.classList.remove('hide');
+            container.classList.add('blur');
+            isOpenRoom = true;
+            rotateAngle = 0;
+            viewer.setPanorama(showroom_3);
+            panorama.dispose();
+        });
     }
     //DoorEnd
-
-    function getEntryPanorama() {
-
-        var panorama, tiles, shadeHeight, menu_classified, menu3, menu4, menu5
-
-        shadeHeight = 5;
-        panorama = new PANOLENS.EmptyPanorama();
-        return panorama;
-
-    }
-    // add farme
-
 }

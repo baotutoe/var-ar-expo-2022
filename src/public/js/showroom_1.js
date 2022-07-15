@@ -1,5 +1,5 @@
 function handlePopupItem(showroom, url, position, rotation) {
-  empty_panorama = new PANOLENS.EmptyPanorama();
+  let empty_panorama = new PANOLENS.EmptyPanorama();
   title_popup_gift_fn_cl = new PANOLENS.Tile(50, 25);
   PANOLENS.Utils.TextureLoader.load(url, setClampTexture.bind(title_popup_gift_fn_cl));
   title_popup_gift_fn_cl.position.set(position.x , position.y , position.z);

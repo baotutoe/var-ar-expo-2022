@@ -1,6 +1,7 @@
 function setClampTexture(texture) {
     var callback;
     if (arguments.length > 1) {
+        console.log("arguments: ", arguments)
         callback = arguments[0];
         texture = arguments[1];
         callback();

@@ -1,4 +1,4 @@
-let panorama, panoramaDoor, viewer, container, infospot, camera, setcamera, hidden = false,
+let panorama, panoramaDoor, showroom_1, showroom_2, showroom_3, viewer, container, infospot, camera, setcamera, hidden = false,
     hidden2 = false,
     entryPanorama2, entryPanorama, radius = 100,
     tileLength = 30,
@@ -12,6 +12,24 @@ const scene = new THREE.Scene()
 
 let isOpenRoom = false;
 let rotateAngle = Math.PI;
+
+var bar = document.querySelector('#bar');
+container = document.querySelector('#container');
+container.classList.add('blur');
+
+function onProgressUpdate ( event ) {
+  var percentage = event.progress.loaded/ event.progress.total * 100;
+  bar.style.width = percentage + "%";
+  console.log("run onProgress")
+  if (percentage >= 100){
+    bar.classList.add('hide');
+    container.classList.remove('blur');
+    console.log("container.classList: ", container.classList)
+    setTimeout(function(){
+      bar.style.width = 0;
+    }, 1000);
+  }
+}
 
 //Request Gygro in IOS
 
@@ -90,7 +108,6 @@ function onImagePanoramaLoaded(event) {
 
 function init() {
 
-    container = document.querySelector('#container');
     // create video TV
     var playVideo = false;
 
@@ -170,6 +187,17 @@ function init() {
     });
     entryPanorama = getEntryPanorama();
     panorama = new PANOLENS.ImagePanorama('static/images/o4Bq4iel2.jfif');
+    panorama.addEventListener('progress', onProgressUpdate);
+
+    showroom_1 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_1.jpeg');
+    showroom_1.addEventListener('progress', onProgressUpdate);
+
+    showroom_2 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_2.jpeg');
+    showroom_2.addEventListener('progress', onProgressUpdate);
+
+    showroom_3 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_3.jpeg');
+    showroom_3.addEventListener('progress', onProgressUpdate);
+
     popup_greenDoor = new PANOLENS.EmptyPanorama();
     panoramas();
     // panorama.addEventListener('progress', onImagePanoramaLoaded);
@@ -180,10 +208,15 @@ function init() {
     panorama.add(room_3)
 
     panorama.add(entryPanorama2)
+    viewer.add(panorama);
+    viewer.add(showroom_1);
+
     //viewer.enableControl(1);
     //DoorStart
     function panoramas() {
         panoramaDoor = new PANOLENS.ImagePanorama('static/images/7CKo4iel2.png')
+        panoramaDoor.addEventListener('progress', onProgressUpdate);
+
         viewer.add(panoramaDoor);
         // viewer.enableControl(1);
         viewer.setPanorama(panoramaDoor);
@@ -196,16 +229,39 @@ function init() {
         });
 
         greenDoor.addEventListener('click', function() {
-            viewer.add(panorama);
-            panorama.load('static/images/o4Bq4iel2.jfif');
+            // panorama.load('static/images/o4Bq4iel2.jfif');
+            bar.classList.remove('hide');
+            container.classList.add('blur');
             isOpenRoom = true;
             rotateAngle = 0;
             viewer.setPanorama(panorama);
+            panorama.add(ic_showroom_1);
             popup_greenDoor.dispose()
-            // panoramaDoor.dispose();
+            panoramaDoor.dispose();
+        });
+
+        ic_showroom_1.addEventListener('click', function() {
+            // handle items of showroom_1
+            bar.classList.remove('hide');
+            container.classList.add('blur');
+            handleShowroom_1();
+            isOpenRoom = true;
+            rotateAngle = 0;
+            viewer.setPanorama(showroom_1);
+            panorama.dispose();
         });
     }
     //DoorEnd
+
+    function getEntryPanorama() {
+
+        var panorama, tiles, shadeHeight, menu_classified, menu3, menu4, menu5
+
+        shadeHeight = 5;
+        panorama = new PANOLENS.EmptyPanorama();
+        return panorama;
+
+    }
     // add farme
 
 }

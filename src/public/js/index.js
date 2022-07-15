@@ -1,4 +1,4 @@
-let panorama, panoramaDoor, viewer, container, infospot, camera, setcamera, hidden = false,
+let panorama, panoramaDoor, showroom_1, showroom_2, showroom_3, viewer, container, infospot, camera, setcamera, hidden = false,
     hidden2 = false,
     entryPanorama2, entryPanorama, radius = 100,
     tileLength = 30,
@@ -169,13 +169,18 @@ function init() {
         controlButtons: ['fullscreen', 'my_video', 'setting']
     });
     entryPanorama = getEntryPanorama();
-    panoramas();
     panorama = new PANOLENS.ImagePanorama('static/images/o4Bq4iel2.jfif');
+    showroom_1 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_1.jpeg');
+    showroom_2 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_2.jpeg');
+    showroom_3 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_3.jpeg');
+    panoramas();
     // panorama.addEventListener('progress', onImagePanoramaLoaded);
     // panorama.load('static/images/7CKo4iel2.jfif');
     panorama.add(entryPanorama)
     panorama.add(entryPanorama2)
     viewer.add(panorama);
+    viewer.add(showroom_1);
+
     //viewer.enableControl(1);
     //DoorStart
 
@@ -188,7 +193,7 @@ function init() {
     renderer.shadowMap.enabled = true;
 
     function panoramas() {
-        panoramaDoor = new PANOLENS.ImagePanorama('static/images/7CKo4iel2.jfif')
+        panoramaDoor = new PANOLENS.ImagePanorama('static/images/buildings/buildings.jpeg')
         viewer.add(panoramaDoor);
         // viewer.enableControl(1);
         viewer.setPanorama(panoramaDoor);
@@ -201,11 +206,23 @@ function init() {
         });
 
         greenDoor.addEventListener('click', function() {
-            panorama.load('static/images/o4Bq4iel2.jfif');
+            // panorama.load('static/images/o4Bq4iel2.jfif');
+            console.log("panorama: ", panorama)
             isOpenRoom = true;
             rotateAngle = 0;
             viewer.setPanorama(panorama);
+            panorama.add(ic_showroom_1)
             panoramaDoor.dispose();
+        });
+
+        ic_showroom_1.addEventListener('click', function() {
+            console.log("showroom_1: ", showroom_1)
+            // handle items of showroom_1
+            handleShowroom_1();
+            isOpenRoom = true;
+            rotateAngle = 0;
+            viewer.setPanorama(showroom_1);
+            panorama.dispose();
         });
     }
     //DoorEnd
@@ -219,6 +236,5 @@ function init() {
         return panorama;
 
     }
-    // add farme
 
 }

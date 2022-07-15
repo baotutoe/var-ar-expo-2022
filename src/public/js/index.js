@@ -13,6 +13,24 @@ const scene = new THREE.Scene()
 let isOpenRoom = false;
 let rotateAngle = Math.PI;
 
+var bar = document.querySelector('#bar');
+container = document.querySelector('#container');
+container.classList.add('blur');
+
+function onProgressUpdate ( event ) {
+  var percentage = event.progress.loaded/ event.progress.total * 100;
+  bar.style.width = percentage + "%";
+  console.log("run onProgress")
+  if (percentage >= 100){
+    bar.classList.add('hide');
+    container.classList.remove('blur');
+    console.log("container.classList: ", container.classList)
+    setTimeout(function(){
+      bar.style.width = 0;
+    }, 1000);
+  }
+}
+
 //Request Gygro in IOS
 
 checkGyGroIOS();
@@ -90,7 +108,6 @@ function onImagePanoramaLoaded(event) {
 
 function init() {
 
-    container = document.querySelector('#container');
     // create video TV
     var playVideo = false;
 
@@ -170,9 +187,17 @@ function init() {
     });
     entryPanorama = getEntryPanorama();
     panorama = new PANOLENS.ImagePanorama('static/images/o4Bq4iel2.jfif');
+    panorama.addEventListener('progress', onProgressUpdate);
+
     showroom_1 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_1.jpeg');
+    showroom_1.addEventListener('progress', onProgressUpdate);
+
     showroom_2 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_2.jpeg');
+    showroom_2.addEventListener('progress', onProgressUpdate);
+
     showroom_3 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_3.jpeg');
+    showroom_3.addEventListener('progress', onProgressUpdate);
+
     panoramas();
     // panorama.addEventListener('progress', onImagePanoramaLoaded);
     // panorama.load('static/images/7CKo4iel2.jfif');
@@ -194,6 +219,7 @@ function init() {
 
     function panoramas() {
         panoramaDoor = new PANOLENS.ImagePanorama('static/images/buildings/buildings.jpeg')
+        panoramaDoor.addEventListener('progress', onProgressUpdate);
         viewer.add(panoramaDoor);
         // viewer.enableControl(1);
         viewer.setPanorama(panoramaDoor);
@@ -207,7 +233,8 @@ function init() {
 
         greenDoor.addEventListener('click', function() {
             // panorama.load('static/images/o4Bq4iel2.jfif');
-            console.log("panorama: ", panorama)
+            bar.classList.remove('hide');
+            container.classList.add('blur');
             isOpenRoom = true;
             rotateAngle = 0;
             viewer.setPanorama(panorama);
@@ -216,8 +243,9 @@ function init() {
         });
 
         ic_showroom_1.addEventListener('click', function() {
-            console.log("showroom_1: ", showroom_1)
             // handle items of showroom_1
+            bar.classList.remove('hide');
+            container.classList.add('blur');
             handleShowroom_1();
             isOpenRoom = true;
             rotateAngle = 0;

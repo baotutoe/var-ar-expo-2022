@@ -14,6 +14,7 @@ let isOpenRoom = false;
 let rotateAngle = Math.PI;
 
 var bar = document.querySelector('#bar');
+var loading = document.querySelector('#loading');
 container = document.querySelector('#container');
 container.classList.add('blur');
 
@@ -23,11 +24,10 @@ function onProgressUpdate ( event ) {
   console.log("run onProgress")
   if (percentage >= 100){
     bar.classList.add('hide');
-    container.classList.remove('blur');
-    console.log("container.classList: ", container.classList)
     setTimeout(function(){
+      loading.style.display = 'none';
       bar.style.width = 0;
-    }, 1000);
+    }, 1500);
   }
 }
 
@@ -232,7 +232,7 @@ function init() {
         greenDoor.addEventListener('click', function() {
             // panorama.load('static/images/o4Bq4iel2.jfif');
             bar.classList.remove('hide');
-            container.classList.add('blur');
+            loading.style.display = '';
             isOpenRoom = true;
             rotateAngle = 0;
             viewer.add(panorama);
@@ -244,7 +244,7 @@ function init() {
         room_1.addEventListener('click', function() {
             // handle items of showroom_1
             bar.classList.remove('hide');
-            container.classList.add('blur');
+            loading.style.display = '';
             handleShowroom_1();
             isOpenRoom = true;
             rotateAngle = 0;
@@ -255,7 +255,7 @@ function init() {
         room_2.addEventListener('click', function() {
             // handle items of showroom_1
             bar.classList.remove('hide');
-            container.classList.add('blur');
+            loading.style.display = '';
             isOpenRoom = true;
             rotateAngle = 0;
             viewer.setPanorama(showroom_2);
@@ -264,7 +264,7 @@ function init() {
         room_3.addEventListener('click', function() {
             // handle items of showroom_1
             bar.classList.remove('hide');
-            container.classList.add('blur');
+            loading.style.display = '';
             isOpenRoom = true;
             rotateAngle = 0;
             viewer.setPanorama(showroom_3);

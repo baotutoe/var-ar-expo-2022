@@ -4,7 +4,7 @@ let panorama, panoramaDoor, showroom_1, showroom_2, showroom_3, viewer, containe
     tileLength = 30,
     border = 1,
     movies = { 'All': { 'results': [] } },
-    app_upload, tiles_all, panorama_upload
+    app_upload, tiles_all, panorama_upload,popup_greenDoor
 let popup, title_popup, popup_2, title_popup_2, popup_3, title_popup_3, popup_4, title_popup_4, popup_5, title_popup_6, popup_click, title_popup_click, popup_gift, title_popup_gift, popup_url, title_popup_url, popup_gift_fn_cl, title_popup_gift_fn_cl,
     popup_play, title_popup_play
 const scene = new THREE.Scene()
@@ -198,34 +198,31 @@ function init() {
     showroom_3 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_3.jpeg');
     showroom_3.addEventListener('progress', onProgressUpdate);
 
+    popup_greenDoor = new PANOLENS.EmptyPanorama();
     panoramas();
     // panorama.addEventListener('progress', onImagePanoramaLoaded);
     // panorama.load('static/images/7CKo4iel2.jfif');
     panorama.add(entryPanorama)
+    panorama.add(room_1)
+    panorama.add(room_2)
+    panorama.add(room_3)
+
     panorama.add(entryPanorama2)
     viewer.add(panorama);
     viewer.add(showroom_1);
 
     //viewer.enableControl(1);
     //DoorStart
-
-
-    renderer = new THREE.WebGLRenderer({
-        antialias: true
-    });
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.shadowMap.enabled = true;
-
     function panoramas() {
-        panoramaDoor = new PANOLENS.ImagePanorama('static/images/buildings/buildings.jpeg')
+        panoramaDoor = new PANOLENS.ImagePanorama('static/images/7CKo4iel2.png')
         panoramaDoor.addEventListener('progress', onProgressUpdate);
+
         viewer.add(panoramaDoor);
         // viewer.enableControl(1);
         viewer.setPanorama(panoramaDoor);
         // viewer.getCamera().fov = 100;
-
-        panoramaDoor.add(greenDoor);
+        popup_greenDoor.add(greenDoor)
+        panoramaDoor.add(popup_greenDoor);
 
         panoramaDoor.addEventListener('enter-fade-start', function() {
             viewer.tweenControlCenter(new THREE.Vector3(0.4, 0, 0), 100);
@@ -238,7 +235,8 @@ function init() {
             isOpenRoom = true;
             rotateAngle = 0;
             viewer.setPanorama(panorama);
-            panorama.add(ic_showroom_1)
+            panorama.add(ic_showroom_1);
+            popup_greenDoor.dispose()
             panoramaDoor.dispose();
         });
 
@@ -264,5 +262,6 @@ function init() {
         return panorama;
 
     }
+    // add farme
 
 }

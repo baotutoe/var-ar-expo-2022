@@ -186,11 +186,11 @@ function init() {
         output: 'console',
         container: container,
         scene: scene,
-        cameraFov: 90,
+        cameraFov: 60,
         controlButtons: ['fullscreen', 'my_video', 'setting']
     });
     entryPanorama = getEntryPanorama();
-    panorama = new PANOLENS.ImagePanorama('static/images/o4Bq4iel2.jfif');
+    panorama = new PANOLENS.ImagePanorama('static/images/sanh2.png');
     panorama.addEventListener('progress', onProgressUpdate);
 
     showroom_1 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_1.jpeg');
@@ -206,7 +206,7 @@ function init() {
     panoramas();
     // panorama.addEventListener('progress', onImagePanoramaLoaded);
     // panorama.load('static/images/7CKo4iel2.jfif');
-    panorama.add(entryPanorama)
+    // panorama.add(entryPanorama)
     panorama.add(room_1)
     panorama.add(room_2)
     panorama.add(room_3)
@@ -219,18 +219,19 @@ function init() {
     //viewer.enableControl(1);
     //DoorStart
     function panoramas() {
-        panoramaDoor = new PANOLENS.ImagePanorama('static/images/7CKo4iel2.png')
+        panoramaDoor = new PANOLENS.ImagePanorama('static/images/sanh1_new.png')
         panoramaDoor.addEventListener('progress', onProgressUpdate);
 
         viewer.add(panoramaDoor);
         // viewer.enableControl(1);
         viewer.setPanorama(panoramaDoor);
         // viewer.getCamera().fov = 100;
+        popup_greenDoor.add(entryPanorama)
         popup_greenDoor.add(greenDoor)
         panoramaDoor.add(popup_greenDoor);
 
         panoramaDoor.addEventListener('enter-fade-start', function() {
-            viewer.tweenControlCenter(new THREE.Vector3(0.4, 0, 0), 100);
+            viewer.tweenControlCenter(new THREE.Vector3(0, 0, 0), 100);
         });
 
         greenDoor.addEventListener('click', function() {

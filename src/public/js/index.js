@@ -16,9 +16,11 @@ let rotateAngle = Math.PI;
 var bar = document.querySelector('#bar');
 var loading = document.querySelector('#loading');
 container = document.querySelector('#container');
-container.classList.add('blur');
 
 function onProgressUpdate ( event ) {
+  if(loading.style.display == "none") {
+    loading.style.display = '';
+  }  
   var percentage = event.progress.loaded/ event.progress.total * 100;
   bar.style.width = percentage + "%";
   console.log("run onProgress")
@@ -107,7 +109,8 @@ function onImagePanoramaLoaded(event) {
 
 
 function init() {
-
+    // display loading page
+    loading.style.display = '';
     // create video TV
     var playVideo = false;
 

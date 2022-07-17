@@ -569,3 +569,14 @@ button::-moz-focus-inner {
   color: hsla(0, 0%, 1000%, .6);
   font-size: 1.6rem;
 }
+
+.item_container {
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .item_container {
+    display: flex;
+    flex-direction: column;
+  }
+}

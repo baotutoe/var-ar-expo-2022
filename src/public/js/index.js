@@ -216,7 +216,7 @@ function init() {
     viewer.add(showroom_2);
     viewer.add(showroom_3);
 
-    //viewer.enableControl(1);
+    viewer.enableControl(1);
     //DoorStart
     function panoramas() {
         panoramaDoor = new PANOLENS.ImagePanorama('static/images/sanh1_new.png')

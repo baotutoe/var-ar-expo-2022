@@ -17,6 +17,7 @@ var bar = document.querySelector('#bar');
 var loading = document.querySelector('#loading');
 container = document.querySelector('#container');
 
+
 function onProgressUpdate ( event ) {
   if(loading.style.display == "none") {
     loading.style.display = '';

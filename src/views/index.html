@@ -32,6 +32,7 @@
     <div id="progress">
       <div id="bar"></div>
     </div>
+
     <div id="loading" style="display: none;" class="scene">
       <div class="plane">
         <div class="cube cube--0">
@@ -108,6 +109,22 @@
         <div class="shadow shadow--7"></div>
       </div>
     </div>
+
+    <!-- Popup open when click item -->
+    <div id="popup_item" class="box" style="display: none">
+      <div class="modal-container" id="m2-o" style="--m-background: hsla(0, 0%, 0%, .4);">
+        <div class="modal">
+          <p id="item__name" class="modal__title"></h1>
+          <div style="display: flex;">
+            <img id="item__img" style="margin: 2px" width="150px" src="" >
+            <p id="item_desc" class="modal__text"></p>
+          </div>
+          <button id="learn_more__link" class="modal__btn">Learn more &rarr;</button>
+          <div id="close_popup__btn" class="link-2"></div>
+        </div>
+      </div>
+    </div>
+
 
     <div id="container">
         <div class="popup" id="nodeviceorientation" style="display:none">

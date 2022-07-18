@@ -31,17 +31,10 @@ function onProgressUpdate ( event ) {
     setTimeout(function(){
       loading.style.display = 'none';
       bar.style.width = 0;
-    }, 2000);
+    }, 1500);
   }
 }
 
-function onRecall(event) {
-    console.log("on recall")
-    setTimeout(function(){
-        loading.style.display = 'none';
-        bar.style.width = 0;
-      }, 2000)
-}
 //Request Gygro in IOS
 
 checkGyGroIOS();
@@ -234,7 +227,6 @@ function init() {
     function panoramas() {
         panoramaDoor = new PANOLENS.ImagePanorama('static/images/sanh1_new.png')
         panoramaDoor.addEventListener('progress', onProgressUpdate);
-        panoramaDoor.addEventListener('loaded', onRecall)
 
         viewer.add(panoramaDoor);
         // viewer.enableControl(1);
@@ -263,8 +255,6 @@ function init() {
         });
 
         b_greenDoor.addEventListener('click', function() {
-            // bar.classList.remove('hide');
-            // loading.style.display = '';
             isOpenRoom = true;
             isEnter = true;
             rotateAngle = 0;
@@ -272,14 +262,29 @@ function init() {
             viewer.setPanorama(panoramaDoor);
             viewer.remove(panorama);
         });
+
         room_1.addEventListener('click', function() {
             // handle items of showroom_1
-            bar.classList.remove('hide');
-            loading.style.display = '';
+            if (!isEnter) {
+                bar.classList.remove('hide');
+                loading.style.display = '';  
+                isEnter = false;  
+            }
             handleShowroom_1();
             isOpenRoom = true;
             rotateAngle = 0;
+            viewer.add(showroom_1)
             viewer.setPanorama(showroom_1);
+            viewer.remove(panorama);
+        });
+
+        b_room_1.addEventListener('click', function() {
+            isOpenRoom = true;
+            isEnter = true;
+            rotateAngle = 0;
+            viewer.add(panorama);
+            viewer.setPanorama(panorama);
+            viewer.remove(showroom_1);
         });
 
         room_2.addEventListener('click', function() {
@@ -288,6 +293,7 @@ function init() {
             loading.style.display = '';
             isOpenRoom = true;
             rotateAngle = 0;
+            viewer.add(showroom_2)
             viewer.setPanorama(showroom_2);
         });
         room_3.addEventListener('click', function() {
@@ -296,6 +302,7 @@ function init() {
             loading.style.display = '';
             isOpenRoom = true;
             rotateAngle = 0;
+            viewer.add(showroom_3)
             viewer.setPanorama(showroom_3);
         });
     }

@@ -27,6 +27,7 @@ function handleShowroom_1() {
   showroom_1.add(item_2);
   showroom_1.add(item_3);
   showroom_1.add(item_4);
+  showroom_1.add(b_room_1);
   
   item_1.addEventListener("click", function() {
      handlePopupItem("TH truemilk", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ex dicta maiores libero minus obcaecati iste optio, eius labore repellendus.",

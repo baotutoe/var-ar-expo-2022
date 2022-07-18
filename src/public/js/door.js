@@ -19,6 +19,12 @@ room_1.position.set(-100, -20, 40);
 room_1.scale.set(0.5, 1, 0.5)
 room_1.rotation.set(0, Math.PI / 2, 0)
 
+b_room_1 = new PANOLENS.Tile(15, 9);
+PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(b_room_1));
+b_room_1.position.set(50, -15, 5);
+b_room_1.scale.set(0.5, 1, 0.5)
+b_room_1.rotation.set( Math.PI / 2, -5 * Math.PI / 6, Math.PI / 2)
+
 // room_2
 room_2 = new PANOLENS.Tile(15, 9);
 PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(room_2));

@@ -7,6 +7,7 @@ let panorama, panoramaDoor, showroom_1, showroom_2, showroom_3, viewer, containe
     app_upload, tiles_all, panorama_upload,popup_greenDoor
 let popup, title_popup, popup_2, title_popup_2, popup_3, title_popup_3, popup_4, title_popup_4, popup_5, title_popup_6, popup_click, title_popup_click, popup_gift, title_popup_gift, popup_url, title_popup_url, popup_gift_fn_cl, title_popup_gift_fn_cl,
     popup_play, title_popup_play
+let isEnter = false;
 const scene = new THREE.Scene()
 
 
@@ -30,10 +31,17 @@ function onProgressUpdate ( event ) {
     setTimeout(function(){
       loading.style.display = 'none';
       bar.style.width = 0;
-    }, 1500);
+    }, 2000);
   }
 }
 
+function onRecall(event) {
+    console.log("on recall")
+    setTimeout(function(){
+        loading.style.display = 'none';
+        bar.style.width = 0;
+      }, 2000)
+}
 //Request Gygro in IOS
 
 checkGyGroIOS();
@@ -210,6 +218,7 @@ function init() {
     panorama.add(room_1)
     panorama.add(room_2)
     panorama.add(room_3)
+    panorama.add(b_greenDoor)
 
     panorama.add(entryPanorama2)
     viewer.add(showroom_1);
@@ -225,6 +234,7 @@ function init() {
     function panoramas() {
         panoramaDoor = new PANOLENS.ImagePanorama('static/images/sanh1_new.png')
         panoramaDoor.addEventListener('progress', onProgressUpdate);
+        panoramaDoor.addEventListener('loaded', onRecall)
 
         viewer.add(panoramaDoor);
         // viewer.enableControl(1);
@@ -240,16 +250,28 @@ function init() {
 
         greenDoor.addEventListener('click', function() {
             // panorama.load('static/images/o4Bq4iel2.jfif');
-            bar.classList.remove('hide');
-            loading.style.display = '';
             isOpenRoom = true;
+            if (!isEnter) {
+                bar.classList.remove('hide');
+                loading.style.display = '';  
+                isEnter = false;  
+            }
             rotateAngle = 0;
             viewer.add(panorama);
             viewer.setPanorama(panorama);
-            popup_greenDoor.dispose()
-            panoramaDoor.dispose();
+            viewer.remove(panoramaDoor);
         });
 
+        b_greenDoor.addEventListener('click', function() {
+            // bar.classList.remove('hide');
+            // loading.style.display = '';
+            isOpenRoom = true;
+            isEnter = true;
+            rotateAngle = 0;
+            viewer.add(panoramaDoor);
+            viewer.setPanorama(panoramaDoor);
+            viewer.remove(panorama);
+        });
         room_1.addEventListener('click', function() {
             // handle items of showroom_1
             bar.classList.remove('hide');
@@ -258,7 +280,6 @@ function init() {
             isOpenRoom = true;
             rotateAngle = 0;
             viewer.setPanorama(showroom_1);
-            panorama.dispose();
         });
 
         room_2.addEventListener('click', function() {
@@ -268,7 +289,6 @@ function init() {
             isOpenRoom = true;
             rotateAngle = 0;
             viewer.setPanorama(showroom_2);
-            panorama.dispose();
         });
         room_3.addEventListener('click', function() {
             // handle items of showroom_1
@@ -277,7 +297,6 @@ function init() {
             isOpenRoom = true;
             rotateAngle = 0;
             viewer.setPanorama(showroom_3);
-            panorama.dispose();
         });
     }
     //DoorEnd

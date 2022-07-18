@@ -5,6 +5,13 @@ greenDoor.position.set(0, -20, -70);
 greenDoor.scale.set(0.5, 1, 0.5)
 greenDoor.rotation.set(-0.5, 0, 0)
 
+// greenr door back
+b_greenDoor = new PANOLENS.Tile(15, 9);
+PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(b_greenDoor));
+b_greenDoor.position.set(0, -20, 80);
+b_greenDoor.scale.set(0.5, 1, 0.5)
+b_greenDoor.rotation.set(0, Math.PI, 0)
+
 // room_1
 room_1 = new PANOLENS.Tile(15, 9);
 PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(room_1));

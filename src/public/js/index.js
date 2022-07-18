@@ -31,7 +31,7 @@ function onProgressUpdate ( event ) {
     setTimeout(function(){
       loading.style.display = 'none';
       bar.style.width = 0;
-    }, 1500);
+    }, 0);
   }
 }
 
@@ -287,7 +287,7 @@ function init() {
         });
 
         room_2.addEventListener('click', function() {
-            // handle items of showroom_1
+            // handle items of showroom_2
             if (!isEnter) {
                 bar.classList.remove('hide');
                 loading.style.display = '';  
@@ -310,14 +310,26 @@ function init() {
         });
 
         room_3.addEventListener('click', function() {
-            // handle items of showroom_1
-            bar.classList.remove('hide');
-            loading.style.display = '';
+            // handle items of showroom_3
+            if (!isEnter) {
+                bar.classList.remove('hide');
+                loading.style.display = '';  
+                isEnter = false;  
+            }
+            handleShowroom_3();
             isOpenRoom = true;
             rotateAngle = 0;
             viewer.add(showroom_3)
             viewer.setPanorama(showroom_3);
             viewer.remove(panorama);
+        });
+        b_room_3.addEventListener('click', function() {
+            isOpenRoom = true;
+            isEnter = true;
+            rotateAngle = 0;
+            viewer.add(panorama);
+            viewer.setPanorama(panorama);
+            viewer.remove(showroom_3);
         });
     }
     //DoorEnd

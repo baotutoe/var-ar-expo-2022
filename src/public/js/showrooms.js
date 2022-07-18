@@ -50,6 +50,10 @@ function handleShowroom_1() {
 }
 
 function handleShowroom_2() {
-  console.log("add b_room_2")
   showroom_2.add(b_room_2);
+}
+
+function handleShowroom_3() {
+  console.log("add sh3: ", b_room_3);
+  showroom_3.add(b_room_3);
 }

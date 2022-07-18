@@ -48,3 +48,8 @@ function handleShowroom_1() {
     "/static/images/showrooms/items/item_3.png", "https://www.w3schools.com/");
   });  
 }
+
+function handleShowroom_2() {
+  console.log("add b_room_2")
+  showroom_2.add(b_room_2);
+}

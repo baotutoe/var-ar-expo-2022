@@ -32,6 +32,12 @@ room_2.position.set(-100, -20, 10);
 room_2.scale.set(0.5, 1, 0.5)
 room_2.rotation.set(0, Math.PI / 2, 0)
 
+b_room_2 = new PANOLENS.Tile(15, 9);
+PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(b_room_2));
+b_room_2.position.set(0, -15, 50);
+b_room_2.scale.set(0.5, 1, 0.5)
+b_room_2.rotation.set(-Math.PI / 5, Math.PI, 0)
+
 // room_2
 room_3 = new PANOLENS.Tile(15, 9);
 PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(room_3));

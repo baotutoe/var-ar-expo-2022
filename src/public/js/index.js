@@ -277,7 +277,6 @@ function init() {
             viewer.setPanorama(showroom_1);
             viewer.remove(panorama);
         });
-
         b_room_1.addEventListener('click', function() {
             isOpenRoom = true;
             isEnter = true;
@@ -289,13 +288,27 @@ function init() {
 
         room_2.addEventListener('click', function() {
             // handle items of showroom_1
-            bar.classList.remove('hide');
-            loading.style.display = '';
+            if (!isEnter) {
+                bar.classList.remove('hide');
+                loading.style.display = '';  
+                isEnter = false;  
+            }
+            handleShowroom_2();
             isOpenRoom = true;
             rotateAngle = 0;
             viewer.add(showroom_2)
             viewer.setPanorama(showroom_2);
+            viewer.remove(panorama);
         });
+        b_room_2.addEventListener('click', function() {
+            isOpenRoom = true;
+            isEnter = true;
+            rotateAngle = 0;
+            viewer.add(panorama);
+            viewer.setPanorama(panorama);
+            viewer.remove(showroom_2);
+        });
+
         room_3.addEventListener('click', function() {
             // handle items of showroom_1
             bar.classList.remove('hide');
@@ -304,6 +317,7 @@ function init() {
             rotateAngle = 0;
             viewer.add(showroom_3)
             viewer.setPanorama(showroom_3);
+            viewer.remove(panorama);
         });
     }
     //DoorEnd

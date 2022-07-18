@@ -64,9 +64,3 @@ PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(r
 room_5.position.set(-42.5, -17.5, -62.5);
 room_5.scale.set(0.5, 1, 0.5)
 room_5.rotation.set(0, Math.PI / 2, -Math.PI / 12)
-
-room_6 = new PANOLENS.Tile(15, 9);
-PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(room_61));
-room_6.position.set(100, -20, 40);
-room_6.scale.set(0.5, 1, 0.5)
-room_6.rotation.set(0, Math.PI / 2, 0)

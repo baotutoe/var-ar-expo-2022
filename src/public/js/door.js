@@ -5,7 +5,6 @@ greenDoor.position.set(-50, -20, -75);
 greenDoor.scale.set(1, 1.5, 1)
 greenDoor.rotation.set(-0.5, 0, 0)
 
-
 // room_1
 room_1 = new PANOLENS.Tile(15, 9);
 PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(room_1));

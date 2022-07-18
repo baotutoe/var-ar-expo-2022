@@ -216,7 +216,11 @@ function init() {
     viewer.add(showroom_2);
     viewer.add(showroom_3);
 
-    viewer.enableControl(1);
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        viewer.enableControl(0);
+    } else {
+        viewer.enableControl(1);
+    }
     //DoorStart
     function panoramas() {
         panoramaDoor = new PANOLENS.ImagePanorama('static/images/sanh1_new.png')

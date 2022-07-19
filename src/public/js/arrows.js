@@ -15,7 +15,7 @@ b_greenDoor.rotation.set(0, Math.PI, 0)
 // room_1
 room_1 = new PANOLENS.Tile(15, 9);
 PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(room_1));
-room_1.position.set(-100, -20, 40);
+room_1.position.set(-100, -20, 34);
 room_1.scale.set(0.5, 1, 0.5)
 room_1.rotation.set(0, Math.PI / 2, 0)
 
@@ -28,7 +28,7 @@ b_room_1.rotation.set( Math.PI / 2, -5 * Math.PI / 6, Math.PI / 2)
 // room_2
 room_2 = new PANOLENS.Tile(15, 9);
 PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(room_2));
-room_2.position.set(-100, -20, 10);
+room_2.position.set(-100, -20, -1);
 room_2.scale.set(0.5, 1, 0.5)
 room_2.rotation.set(0, Math.PI / 2, 0)
 
@@ -41,7 +41,7 @@ b_room_2.rotation.set(-Math.PI / 5, Math.PI, 0)
 // room_2
 room_3 = new PANOLENS.Tile(15, 9);
 PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(room_3));
-room_3.position.set(-100, -20, -15);
+room_3.position.set(-100, -20, -38);
 room_3.scale.set(0.5, 1, 0.5)
 room_3.rotation.set(0, Math.PI / 2, 0)
 
@@ -54,13 +54,26 @@ b_room_3.rotation.set(Math.PI / 2, -Math.PI / 4, Math.PI / 2)
 // room_4
 room_4 = new PANOLENS.Tile(15, 9);
 PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(room_4));
-room_4.position.set(-95, -20, -41);
+room_4.position.set(-35, -17.5, -62.5);
 room_4.scale.set(0.5, 1, 0.5)
-room_4.rotation.set(0, Math.PI / 2, 0)
+room_4.rotation.set(0, 0, 0)
 
 // room_5
 room_5 = new PANOLENS.Tile(15, 9);
 PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(room_5));
-room_5.position.set(-42.5, -17.5, -62.5);
+room_5.position.set(-11, -17.5, -62.5);
 room_5.scale.set(0.5, 1, 0.5)
-room_5.rotation.set(0, Math.PI / 2, -Math.PI / 12)
+room_5.rotation.set(0, 0, 0)
+
+room_6 = new PANOLENS.Tile(15, 9);
+PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(room_6));
+room_6.position.set(12, -17.5, -62.5);
+room_6.scale.set(0.5, 1, 0.5)
+room_6.rotation.set(0, 0, 0)
+
+  
+room_7 = new PANOLENS.Tile(15, 9);
+PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(room_7));
+room_7.position.set(36, -17.5, -62.5);
+room_7.scale.set(0.5, 1, 0.5)
+room_7.rotation.set(0, 0, 0)

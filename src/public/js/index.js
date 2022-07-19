@@ -212,6 +212,8 @@ function init() {
     panorama.add(room_3)
     panorama.add(room_4)
     panorama.add(room_5)
+    panorama.add(room_6)
+    panorama.add(room_7)
     panorama.add(b_greenDoor)
 
     panorama.add(entryPanorama2)

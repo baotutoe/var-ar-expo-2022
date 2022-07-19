@@ -77,3 +77,21 @@ PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(r
 room_7.position.set(36, -17.5, -62.5);
 room_7.scale.set(0.5, 1, 0.5)
 room_7.rotation.set(0, 0, 0)
+
+room_8 = new PANOLENS.Tile(15, 9);
+PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(room_8));
+room_8.position.set(100, -20, 22);
+room_8.scale.set(0.5, 1, 0.5)
+room_8.rotation.set(0, 3 * Math.PI / 2, 0)
+
+room_9 = new PANOLENS.Tile(15, 9);
+PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(room_9));
+room_9.position.set(100, -20, -16);
+room_9.scale.set(0.5, 1, 0.5)
+room_9.rotation.set(0, 3 * Math.PI / 2, 0)
+
+room_10 = new PANOLENS.Tile(15, 9);
+PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(room_10));
+room_10.position.set(90, -20, -47);
+room_10.scale.set(0.5, 1, 0.5)
+room_10.rotation.set(0, 3 * Math.PI / 2, 0)

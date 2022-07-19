@@ -1,4 +1,4 @@
-let panorama, panoramaDoor, showroom_1, showroom_2, showroom_3, viewer, container, infospot, camera, setcamera, hidden = false,
+let panorama, panoramaDoor, viewer, container, infospot, camera, setcamera, hidden = false,
     hidden2 = false,
     entryPanorama2, entryPanorama, radius = 100,
     tileLength = 30,
@@ -7,6 +7,7 @@ let panorama, panoramaDoor, showroom_1, showroom_2, showroom_3, viewer, containe
     app_upload, tiles_all, panorama_upload,popup_greenDoor
 let popup, title_popup, popup_2, title_popup_2, popup_3, title_popup_3, popup_4, title_popup_4, popup_5, title_popup_6, popup_click, title_popup_click, popup_gift, title_popup_gift, popup_url, title_popup_url, popup_gift_fn_cl, title_popup_gift_fn_cl
 let isEnter = false;
+let showroom_1, showroom_2, showroom_3, showroom_4, showroom_5, showroom_6, showroom_7, showroom_8, showroom_9, showroom_10
 const scene = new THREE.Scene()
 
 
@@ -202,6 +203,27 @@ function init() {
     showroom_3 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_3.jpeg');
     showroom_3.addEventListener('progress', onProgressUpdate);
 
+    showroom_4 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_1.jpeg');
+    showroom_4.addEventListener('progress', onProgressUpdate);
+
+    showroom_5 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_2.jpeg');
+    showroom_5.addEventListener('progress', onProgressUpdate);
+
+    showroom_6 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_3.jpeg');
+    showroom_6.addEventListener('progress', onProgressUpdate);
+
+    showroom_7 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_1.jpeg');
+    showroom_7.addEventListener('progress', onProgressUpdate);
+
+    showroom_8 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_2.jpeg');
+    showroom_8.addEventListener('progress', onProgressUpdate);
+
+    showroom_9 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_3.jpeg');
+    showroom_9.addEventListener('progress', onProgressUpdate);
+
+    showroom_10 = new PANOLENS.ImagePanorama('static/images/showrooms/showroom_3.jpeg');
+    showroom_10.addEventListener('progress', onProgressUpdate);
+
     popup_greenDoor = new PANOLENS.EmptyPanorama();
     panoramas();
     // panorama.addEventListener('progress', onImagePanoramaLoaded);
@@ -223,6 +245,13 @@ function init() {
     viewer.add(showroom_1);
     viewer.add(showroom_2);
     viewer.add(showroom_3);
+    viewer.add(showroom_4);
+    viewer.add(showroom_5);
+    viewer.add(showroom_6);
+    viewer.add(showroom_7);
+    viewer.add(showroom_8);
+    viewer.add(showroom_9);
+    viewer.add(showroom_10);
 
     if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         viewer.enableControl(0);
@@ -336,6 +365,174 @@ function init() {
             viewer.add(panorama);
             viewer.setPanorama(panorama);
             viewer.remove(showroom_3);
+        });
+
+        room_4.addEventListener('click', function() {
+            // handle items of showroom_1
+            if (!isEnter) {
+                bar.classList.remove('hide');
+                loading.style.display = '';  
+                isEnter = false;  
+            }
+            handleShowroom_4();
+            isOpenRoom = true;
+            rotateAngle = 0;
+            viewer.add(showroom_4)
+            viewer.setPanorama(showroom_4);
+            viewer.remove(panorama);
+        });
+
+        b_room_4.addEventListener('click', function() {
+            isOpenRoom = true;
+            isEnter = true;
+            rotateAngle = 0;
+            viewer.add(panorama);
+            viewer.setPanorama(panorama);
+            viewer.remove(showroom_4);
+        });
+
+        room_5.addEventListener('click', function() {
+            // handle items of showroom_1
+            if (!isEnter) {
+                bar.classList.remove('hide');
+                loading.style.display = '';  
+                isEnter = false;  
+            }
+            handleShowroom_5();
+            isOpenRoom = true;
+            rotateAngle = 0;
+            viewer.add(showroom_5)
+            viewer.setPanorama(showroom_5);
+            viewer.remove(panorama);
+        });
+
+        b_room_5.addEventListener('click', function() {
+            isOpenRoom = true;
+            isEnter = true;
+            rotateAngle = 0;
+            viewer.add(panorama);
+            viewer.setPanorama(panorama);
+            viewer.remove(showroom_5);
+        });
+
+        room_6.addEventListener('click', function() {
+            // handle items of showroom_1
+            if (!isEnter) {
+                bar.classList.remove('hide');
+                loading.style.display = '';  
+                isEnter = false;  
+            }
+            handleShowroom_6();
+            isOpenRoom = true;
+            rotateAngle = 0;
+            viewer.add(showroom_6)
+            viewer.setPanorama(showroom_6);
+            viewer.remove(panorama);
+        });
+
+        b_room_6.addEventListener('click', function() {
+            isOpenRoom = true;
+            isEnter = true;
+            rotateAngle = 0;
+            viewer.add(panorama);
+            viewer.setPanorama(panorama);
+            viewer.remove(showroom_6);
+        });
+
+        room_7.addEventListener('click', function() {
+            // handle items of showroom_1
+            if (!isEnter) {
+                bar.classList.remove('hide');
+                loading.style.display = '';  
+                isEnter = false;  
+            }
+            handleShowroom_7();
+            isOpenRoom = true;
+            rotateAngle = 0;
+            viewer.add(showroom_7)
+            viewer.setPanorama(showroom_7);
+            viewer.remove(panorama);
+        });
+
+        b_room_7.addEventListener('click', function() {
+            isOpenRoom = true;
+            isEnter = true;
+            rotateAngle = 0;
+            viewer.add(panorama);
+            viewer.setPanorama(panorama);
+            viewer.remove(showroom_7);
+        });
+
+        room_8.addEventListener('click', function() {
+            // handle items of showroom_1
+            if (!isEnter) {
+                bar.classList.remove('hide');
+                loading.style.display = '';  
+                isEnter = false;  
+            }
+            handleShowroom_8();
+            isOpenRoom = true;
+            rotateAngle = 0;
+            viewer.add(showroom_8)
+            viewer.setPanorama(showroom_8);
+            viewer.remove(panorama);
+        });
+
+        b_room_8.addEventListener('click', function() {
+            isOpenRoom = true;
+            isEnter = true;
+            rotateAngle = 0;
+            viewer.add(panorama);
+            viewer.setPanorama(panorama);
+            viewer.remove(showroom_8);
+        });
+
+        room_9.addEventListener('click', function() {
+            // handle items of showroom_1
+            if (!isEnter) {
+                bar.classList.remove('hide');
+                loading.style.display = '';  
+                isEnter = false;  
+            }
+            handleShowroom_9();
+            isOpenRoom = true;
+            rotateAngle = 0;
+            viewer.add(showroom_9)
+            viewer.setPanorama(showroom_9);
+            viewer.remove(panorama);
+        });
+
+        b_room_9.addEventListener('click', function() {
+            isOpenRoom = true;
+            isEnter = true;
+            rotateAngle = 0;
+            viewer.add(panorama);
+            viewer.setPanorama(panorama);
+            viewer.remove(showroom_9);
+        });
+
+        room_10.addEventListener('click', function() {
+            // handle items of showroom_1
+            if (!isEnter) {
+                bar.classList.remove('hide');
+                loading.style.display = '';  
+                isEnter = false;  
+            }
+            handleShowroom_10();
+            isOpenRoom = true;
+            rotateAngle = 0;
+            viewer.add(showroom_10)
+            viewer.setPanorama(showroom_10);
+            viewer.remove(panorama);
+        });
+
+        b_room_10.addEventListener('click', function() {
+            isOpenRoom = true;
+            isEnter = true;
+            rotateAngle = 0;
+            viewer.add(panorama);
+            viewer.setPanorama(panorama);
+            viewer.remove(showroom_10);
         });
     }
     //DoorEnd

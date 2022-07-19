@@ -75,6 +75,33 @@ function handleShowroom_2() {
 }
 
 function handleShowroom_3() {
-  console.log("add sh3: ", b_room_3);
   showroom_3.add(b_room_3);
+}
+
+function handleShowroom_4() {
+  showroom_4.add(b_room_4);
+}
+
+function handleShowroom_5() {
+  showroom_5.add(b_room_5);
+}
+
+function handleShowroom_6() {
+  showroom_6.add(b_room_6);
+}
+
+function handleShowroom_7() {
+  showroom_7.add(b_room_7);
+}
+
+function handleShowroom_8() {
+  showroom_8.add(b_room_8);
+}
+
+function handleShowroom_9() {
+  showroom_9.add(b_room_9);
+}
+
+function handleShowroom_10() {
+  showroom_10.add(b_room_10);
 }

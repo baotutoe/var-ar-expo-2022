@@ -5,8 +5,7 @@ let panorama, panoramaDoor, showroom_1, showroom_2, showroom_3, viewer, containe
     border = 1,
     movies = { 'All': { 'results': [] } },
     app_upload, tiles_all, panorama_upload,popup_greenDoor
-let popup, title_popup, popup_2, title_popup_2, popup_3, title_popup_3, popup_4, title_popup_4, popup_5, title_popup_6, popup_click, title_popup_click, popup_gift, title_popup_gift, popup_url, title_popup_url, popup_gift_fn_cl, title_popup_gift_fn_cl,
-    popup_play, title_popup_play
+let popup, title_popup, popup_2, title_popup_2, popup_3, title_popup_3, popup_4, title_popup_4, popup_5, title_popup_6, popup_click, title_popup_click, popup_gift, title_popup_gift, popup_url, title_popup_url, popup_gift_fn_cl, title_popup_gift_fn_cl
 let isEnter = false;
 const scene = new THREE.Scene()
 
@@ -114,73 +113,73 @@ function init() {
     // display loading page
     loading.style.display = '';
     // create video TV
-    var playVideo = false;
+    // var playVideo = false;
 
-    function play_video() {
-        playVideo = !playVideo;
-        if (playVideo == true)
-            video.play();
-        else
-            video.pause();
-    }
-    const video = document.getElementById('my_video');
+    // function play_video() {
+    //     playVideo = !playVideo;
+    //     if (playVideo == true)
+    //         video.play();
+    //     else
+    //         video.pause();
+    // }
+    // const video = document.getElementById('my_video');
 
-    function openFullscreen() {
-        if (video.requestFullscreen) {
-            video.requestFullscreen();
-        } else if (video.webkitRequestFullscreen) { /* Safari */
-            video.webkitRequestFullscreen();
-        } else if (video.msRequestFullscreen) { /* IE11 */
-            video.msRequestFullscreen();
-        }
-    }
-    const videoTexture = new THREE.VideoTexture(video);
-    const videoMaterial = new THREE.MeshBasicMaterial({
-        map: videoTexture,
-        side: THREE.DoubleSide,
-    });
+    // function openFullscreen() {
+    //     if (video.requestFullscreen) {
+    //         video.requestFullscreen();
+    //     } else if (video.webkitRequestFullscreen) { /* Safari */
+    //         video.webkitRequestFullscreen();
+    //     } else if (video.msRequestFullscreen) { /* IE11 */
+    //         video.msRequestFullscreen();
+    //     }
+    // }
+    // const videoTexture = new THREE.VideoTexture(video);
+    // const videoMaterial = new THREE.MeshBasicMaterial({
+    //     map: videoTexture,
+    //     side: THREE.DoubleSide,
+    // });
 
-    //Create screen
-    const screen = new THREE.PlaneGeometry(1, 1);
-    const videoScreen = new THREE.Mesh(screen, videoMaterial);
-    videoScreen.position.set(108, 11, 0)
-    videoScreen.scale.set(110, 62.5, 1)
-    videoScreen.rotation.set(0, Math.PI / -2, 0)
-    // panorama.add(videoScreen);
-    video.muted = false;
-    // video.play();
-    //icon play
-    popup_play = new PANOLENS.EmptyPanorama();
-    title_popup_play = new PANOLENS.Tile(30, 15);
-    PANOLENS.Utils.TextureLoader.load('static/images/play.png', setClampTexture.bind(title_popup_play));
-    title_popup_play.position.set(107, 11, 0)
-    title_popup_play.rotation.set(0, Math.PI / -2, 0)
-    title_popup_play.addEventListener('click-entity', function() {
-        popup_play.dispose()
-            // openFullscreen()       
-        play_video()
-    });
-    popup_play.add(title_popup_play)
+    // //Create screen
+    // const screen = new THREE.PlaneGeometry(1, 1);
+    // const videoScreen = new THREE.Mesh(screen, videoMaterial);
+    // videoScreen.position.set(108, 11, 0)
+    // videoScreen.scale.set(110, 62.5, 1)
+    // videoScreen.rotation.set(0, Math.PI / -2, 0)
+    // // panorama.add(videoScreen);
+    // video.muted = false;
+    // // video.play();
+    // //icon play
+    // popup_play = new PANOLENS.EmptyPanorama();
+    // title_popup_play = new PANOLENS.Tile(30, 15);
+    // PANOLENS.Utils.TextureLoader.load('static/images/play.png', setClampTexture.bind(title_popup_play));
+    // title_popup_play.position.set(107, 11, 0)
+    // title_popup_play.rotation.set(0, Math.PI / -2, 0)
+    // title_popup_play.addEventListener('click-entity', function() {
+    //     popup_play.dispose()
+    //         // openFullscreen()       
+    //     play_video()
+    // });
+    // popup_play.add(title_popup_play)
 
-    // panorama.add(popup_play)
-    videoScreen.addEventListener('click-entity', function() {
-        if (playVideo == false) popup_play.dispose()
-        else {
-            popup_play = new PANOLENS.EmptyPanorama();
-            title_popup_play = new PANOLENS.Tile(30, 15);
-            PANOLENS.Utils.TextureLoader.load('static/images/play.png', setClampTexture.bind(title_popup_play));
-            title_popup_play.position.set(107, 11, 0)
-            title_popup_play.rotation.set(0, Math.PI / -2, 0)
-            title_popup_play.addEventListener('click-entity', function() {
-                popup_play.dispose()
-                play_video()
-            });
-            popup_play.add(title_popup_play)
-            panorama.add(popup_play)
-        }
-        play_video()
+    // // panorama.add(popup_play)
+    // videoScreen.addEventListener('click-entity', function() {
+    //     if (playVideo == false) popup_play.dispose()
+    //     else {
+    //         popup_play = new PANOLENS.EmptyPanorama();
+    //         title_popup_play = new PANOLENS.Tile(30, 15);
+    //         PANOLENS.Utils.TextureLoader.load('static/images/play.png', setClampTexture.bind(title_popup_play));
+    //         title_popup_play.position.set(107, 11, 0)
+    //         title_popup_play.rotation.set(0, Math.PI / -2, 0)
+    //         title_popup_play.addEventListener('click-entity', function() {
+    //             popup_play.dispose()
+    //             play_video()
+    //         });
+    //         popup_play.add(title_popup_play)
+    //         panorama.add(popup_play)
+    //     }
+    //     play_video()
 
-    });
+    // });
 
     //end
     viewer = new PANOLENS.Viewer({

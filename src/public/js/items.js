@@ -161,8 +161,50 @@ backr2.position.set(0, -15.5, 90);
 backr2.rotation.set(0, -Math.PI, 0)
 backr2.scale.set(8, 8, 8)
 
+backr3 = new PANOLENS.Tile(6, 0.4);
+PANOLENS.Utils.TextureLoader.load("static/images/logo/back.png", setClampTexture.bind(backr3));
+backr3.position.set(80, -12.5, 0);
+backr3.rotation.set(0, -Math.PI/2, 0)
+backr3.scale.set(8, 8, 8)
+
+backr4  = new PANOLENS.Tile(6, 0.4);
+PANOLENS.Utils.TextureLoader.load("static/images/logo/back.png", setClampTexture.bind(backr4));
+backr4.position.set(108, -5, 0)
+backr4.rotation.set(0, Math.PI / -2, 0)
+backr4.scale.set(8, 8, 8)
+
+backr5 = new PANOLENS.Tile(6, 0.4);
+PANOLENS.Utils.TextureLoader.load("static/images/logo/back.png", setClampTexture.bind(backr5));
+backr5.position.set(0, -15.5, 90);
+backr5.rotation.set(0, -Math.PI, 0)
+backr5.scale.set(8, 8, 8)
+
+backr6 = new PANOLENS.Tile(6, 0.4);
+PANOLENS.Utils.TextureLoader.load("static/images/logo/back.png", setClampTexture.bind(backr6));
+backr6.position.set(80, -12.5, 0);
+backr6.rotation.set(0, -Math.PI/2, 0)
+backr6.scale.set(8, 8, 8)
+
+backr7 = new PANOLENS.Tile(6, 0.4);
+PANOLENS.Utils.TextureLoader.load("static/images/logo/back.png", setClampTexture.bind(backr7));
+backr7.position.set(108, -5, 0)
+backr7.rotation.set(0, Math.PI / -2, 0)
+backr7.scale.set(8, 8, 8)
+
+backr8 = new PANOLENS.Tile(6, 0.4);
+PANOLENS.Utils.TextureLoader.load("static/images/logo/back.png", setClampTexture.bind(backr8));
+backr8.position.set(0, -15.5, 90);
+backr8.rotation.set(0, -Math.PI, 0)
+backr8.scale.set(8, 8, 8)
+
 backr9 = new PANOLENS.Tile(6, 0.4);
 PANOLENS.Utils.TextureLoader.load("static/images/logo/back.png", setClampTexture.bind(backr9));
-backr9.position.set(108, -5, 0)
-backr9.rotation.set(0, Math.PI / -2, 0)
+backr9.position.set(80, -12.5, 0);
+backr9.rotation.set(0, -Math.PI/2, 0)
 backr9.scale.set(8, 8, 8)
+
+backr10 = new PANOLENS.Tile(6, 0.4);
+PANOLENS.Utils.TextureLoader.load("static/images/logo/back.png", setClampTexture.bind(backr10));
+backr10.position.set(108, -5, 0)
+backr10.rotation.set(0, Math.PI / -2, 0)
+backr10.scale.set(8, 8, 8)

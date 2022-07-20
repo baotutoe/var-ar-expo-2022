@@ -60,7 +60,7 @@ room_4.rotation.set(0, 0, 0)
 
 b_room_4 = new PANOLENS.Tile(15, 9);
 PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(b_room_4));
-b_room_4.position.set(50, -15, 5);
+b_room_4.position.set(60, -15, 0);
 b_room_4.scale.set(0.5, 1, 0.5)
 b_room_4.rotation.set( Math.PI / 2, -5 * Math.PI / 6, Math.PI / 2)
 
@@ -97,7 +97,7 @@ room_7.rotation.set(0, 0, 0)
 
 b_room_7 = new PANOLENS.Tile(15, 9);
 PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(b_room_7));
-b_room_7.position.set(50, -15, 5);
+b_room_7.position.set(60, -15, 0);
 b_room_7.scale.set(0.5, 1, 0.5)
 b_room_7.rotation.set( Math.PI / 2, -5 * Math.PI / 6, Math.PI / 2)
 
@@ -122,7 +122,7 @@ room_9.rotation.set(0, 3 * Math.PI / 2, 0)
 
 b_room_9 = new PANOLENS.Tile(15, 9);
 PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(b_room_9));
-b_room_9.position.set(50, -5, 0);
+b_room_9.position.set(50, -12.5, 0);
 b_room_9.scale.set(0.5, 1, 0.5)
 b_room_9.rotation.set( Math.PI / 2, -5 * Math.PI / 6, Math.PI / 2)
 
@@ -135,6 +135,6 @@ room_10.rotation.set(0, 3 * Math.PI / 2, 0)
 
 b_room_10 = new PANOLENS.Tile(15, 9);
 PANOLENS.Utils.TextureLoader.load("static/images/mt.png", setClampTexture.bind(b_room_10));
-b_room_10.position.set(50, -15, 5);
+b_room_10.position.set(60, -15, 0);
 b_room_10.scale.set(0.5, 1, 0.5)
 b_room_10.rotation.set( Math.PI / 2, -5 * Math.PI / 6, Math.PI / 2)

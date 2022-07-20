@@ -83,7 +83,7 @@ function handleShowroom_3() {
   showroom_3.add(b_room_3);
   showroom_3.add(logo3);
   showroom_3.add(name3);
-  showroom_3.add(backr2);
+  showroom_3.add(backr3);
   showroom_3.add(videoScreen2)
   showroom_3.add(popup_play2)
   videoScreen2.addEventListener('click-entity', function() {
@@ -158,22 +158,27 @@ videoScreen2_2.addEventListener('click-entity', function() {
 }
 
 function handleShowroom_4() {
+  showroom_4.add(backr4);
   showroom_4.add(b_room_4);
 }
 
 function handleShowroom_5() {
+  showroom_5.add(backr5);
   showroom_5.add(b_room_5);
 }
 
 function handleShowroom_6() {
+  showroom_6.add(backr6);
   showroom_6.add(b_room_6);
 }
 
 function handleShowroom_7() {
+  showroom_7.add(backr7);
   showroom_7.add(b_room_7);
 }
 
 function handleShowroom_8() {
+  showroom_8.add(backr8);
   showroom_8.add(b_room_8);
 }
 
@@ -252,5 +257,6 @@ item_4.addEventListener("click",  function() {
 }
 
 function handleShowroom_10() {
+  showroom_10.add(backr10);
   showroom_10.add(b_room_10);
 }

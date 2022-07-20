@@ -15,7 +15,7 @@ function handlePopupItem(name, description, url, learn_more) {
     console.log('img_url: ', url);
     popup_item.style.display = '';
     item__img.setAttribute("src", url);
-    item__desc.innerText = description;
+    item__desc.innerHTML = description;
     item__name.innerText = name;
     learn_more__link.addEventListener("click", function() {
         window.open(learn_more);
@@ -237,21 +237,21 @@ videoScreen2_2.addEventListener('click-entity', function() {
 
 });
 item_1.addEventListener("click", function() {
-  handlePopupItem("Ngọc trai Fresh water", "Chuỗi cổ Ngọc trai Love Đặc điểm chính: <br> - Ngọc trai Fresh water, hình dạng tròn đều - Kích thước Ngọc: 9.0 mm - Cấp độ Ngọc: 3A - Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh Giá niêm yết: 11.200.000đ",
+  handlePopupItem("Ngọc trai Fresh water", "Chuỗi cổ Ngọc trai Love. <br>Đặc điểm chính: <br>- Ngọc trai Fresh water, hình dạng tròn đều <br>- Kích thước Ngọc: 9.0 mm <br>- Cấp độ Ngọc: 3A <br>- Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh <br>- Giá niêm yết: 11.200.000đ",
   "/static/images/showrooms/items/item1_dn9.jpg", "https://www.w3schools.com/");
 });
 
 item_2.addEventListener("click",  function() {
- handlePopupItem("Ngọc trai Fresh water", "Chuỗi cổ Ngọc trai Love Đặc điểm chính: - Ngọc trai Fresh water, hình dạng tròn đều - Kích thước Ngọc: 9.0 mm - Cấp độ Ngọc: 3A - Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh Giá niêm yết: 11.200.000đ",
+ handlePopupItem("Ngọc trai Fresh water", "Chuỗi cổ Ngọc trai Love. <br>Đặc điểm chính: <br>- Ngọc trai Fresh water, hình dạng tròn đều <br>- Kích thước Ngọc: 9.0 mm <br>- Cấp độ Ngọc: 3A <br>- Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh <br>- Giá niêm yết: 11.200.000đ",
  "/static/images/showrooms/items/item2_dn9.jpg", "https://www.w3schools.com/");
 });
 
 item_3.addEventListener("click",  function() {
- handlePopupItem("Ngọc trai Fresh water", "Chuỗi cổ Ngọc trai Love Đặc điểm chính: - Ngọc trai Fresh water, hình dạng tròn đều - Kích thước Ngọc: 9.0 mm - Cấp độ Ngọc: 3A - Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh Giá niêm yết: 11.200.000đ",
+ handlePopupItem("Ngọc trai Fresh water", "Chuỗi cổ Ngọc trai Love. <br>Đặc điểm chính: <br>- Ngọc trai Fresh water, hình dạng tròn đều <br>- Kích thước Ngọc: 9.0 mm <br>- Cấp độ Ngọc: 3A <br>- Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh <br>- Giá niêm yết: 11.200.000đ",
  "/static/images/showrooms/items/item3_dn9.jpg", "https://www.w3schools.com/");
 });
 item_4.addEventListener("click",  function() {
- handlePopupItem("Ngọc trai Fresh water", "Chuỗi cổ Ngọc trai Love Đặc điểm chính: - Ngọc trai Fresh water, hình dạng tròn đều - Kích thước Ngọc: 9.0 mm - Cấp độ Ngọc: 3A - Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh Giá niêm yết: 11.200.000đ",
+ handlePopupItem("Ngọc trai Fresh water", "Chuỗi cổ Ngọc trai Love. <br>Đặc điểm chính: <br>- Ngọc trai Fresh water, hình dạng tròn đều <br>- Kích thước Ngọc: 9.0 mm <br>- Cấp độ Ngọc: 3A <br>- Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh <br>- Giá niêm yết: 11.200.000đ",
  "/static/images/showrooms/items/item4_dn9.jpg", "https://www.w3schools.com/");
 });  
 }

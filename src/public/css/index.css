@@ -452,7 +452,6 @@ button::-moz-focus-inner {
 
 .modal {
   opacity: 0.9;
-  width: 60rem;
   padding: 4rem 2rem;
   border-radius: .8rem;
 

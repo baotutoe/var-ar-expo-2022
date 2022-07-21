@@ -578,5 +578,22 @@ button::-moz-focus-inner {
   .item_container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal {
+    height: 700px;
+    width: 360px;
+    opacity: 0.9;
+    padding: 4rem 2rem;
+    border-radius: .8rem;
+  
+    color: var(--light);
+    background: var(--background);
+    box-shadow: var(--m-shadow, .4rem .4rem 10.2rem .2rem) var(--shadow-1);
+    position: relative;
+  
+    overflow: scroll;
   }
 }

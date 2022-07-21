@@ -109,72 +109,70 @@ name3.scale.set(8, 8, 8)
 
 //4
 logo4 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/logo/dn1.png", setClampTexture.bind(logo4));
+PANOLENS.Utils.TextureLoader.load("static/images/logo/dn4.png", setClampTexture.bind(logo4));
 logo4.position.set(-60, 30, 0);
 logo4.rotation.set(0, Math.PI / 2, 0)
 logo4.scale.set(8, 8, 8)
 
-name4 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/logo/dn1.png", setClampTexture.bind(name4));
-name4.position.set(-60, 20, 0);
+name4 = new PANOLENS.Tile(6, 0.8);
+PANOLENS.Utils.TextureLoader.load("static/images/logo/namedn4.png", setClampTexture.bind(name4));
+name4.position.set(-60, 24, 0);
 name4.rotation.set(0, Math.PI / 2, 0)
 name4.scale.set(8, 8, 8)
 //
 
 //5
-logo5 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/logo/dn1.png", setClampTexture.bind(logo5));
-logo5.position.set(-60, 30, 0);
-logo5.rotation.set(0, Math.PI / 2, 0)
+logo5 = new PANOLENS.Tile(2, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/logo/dn5.png", setClampTexture.bind(logo5));
+logo5.position.set(-35, 35, -69);
 logo5.scale.set(8, 8, 8)
 
-name5 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/logo/dn1.png", setClampTexture.bind(name5));
-name5.position.set(-60, 20, 0);
-name5.rotation.set(0, Math.PI / 2, 0)
+name5 = new PANOLENS.Tile(6, 0.8);
+PANOLENS.Utils.TextureLoader.load("static/images/logo/namedn5.png", setClampTexture.bind(name5));
+name5.position.set(0, 35, -70);
 name5.scale.set(8, 8, 8)
 //
 
 //6
-logo6 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/logo/dn1.png", setClampTexture.bind(logo6));
-logo6.position.set(-60, 30, 0);
-logo6.rotation.set(0, Math.PI / 2, 0)
-logo6.scale.set(8, 8, 8)
+// logo6 = new PANOLENS.Tile(1, 1);
+// PANOLENS.Utils.TextureLoader.load("static/images/logo/dn1.png", setClampTexture.bind(logo6));
+// logo6.position.set(-60, 30, 0);
+// logo6.rotation.set(0, Math.PI / 2, 0)
+// logo6.scale.set(8, 8, 8)
 
-name6 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/logo/dn1.png", setClampTexture.bind(name6));
-name6.position.set(-60, 20, 0);
-name6.rotation.set(0, Math.PI / 2, 0)
-name6.scale.set(8, 8, 8)
+logoname6 = new PANOLENS.Tile(7, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/logo/logonamedn6.png", setClampTexture.bind(logoname6));
+logoname6.position.set(-90, 19, -5);
+logoname6.rotation.set(0, Math.PI / 2, 0)
+logoname6.scale.set(8, 8, 8)
 //
 
 //7
-logo6 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/logo/dn1.png", setClampTexture.bind(logo6));
-logo6.position.set(-60, 30, 0);
-logo6.rotation.set(0, Math.PI / 2, 0)
-logo6.scale.set(8, 8, 8)
+logo7 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/logo/dn7.png", setClampTexture.bind(logo7));
+logo7.position.set(-59 , 30, 0);
+logo7.rotation.set(0, Math.PI / 2, 0)
+logo7.scale.set(8, 8, 8)
 
-name6 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/logo/dn1.png", setClampTexture.bind(name6));
-name6.position.set(-60, 20, 0);
-name6.rotation.set(0, Math.PI / 2, 0)
-name6.scale.set(8, 8, 8)
+name7 = new PANOLENS.Tile(7, 0.7);
+PANOLENS.Utils.TextureLoader.load("static/images/logo/namedn7.png", setClampTexture.bind(name7));   
+name7.position.set(-60, 24, 0);
+name7.rotation.set(0, Math.PI / 2, 0)
+name7.scale.set(8, 8, 8)
 //
 
 //8
-logo6 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/logo/dn1.png", setClampTexture.bind(logo6));
-logo6.position.set(-60, 30, 0);
-logo6.rotation.set(0, Math.PI / 2, 0)
-logo6.scale.set(8, 8, 8)
+logo8 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/logo/dn8.png", setClampTexture.bind(logo8));
+logo8.position.set(-90, 19, 8);
+logo8.rotation.set(0, Math.PI / 2, 0)
+logo8.scale.set(8, 8, 8)
 
-name6 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/logo/dn1.png", setClampTexture.bind(name6));
-name6.position.set(-60, 20, 0);
-name6.rotation.set(0, Math.PI / 2, 0)
-name6.scale.set(8, 8, 8)
+name8 = new PANOLENS.Tile(2, 0.6);
+PANOLENS.Utils.TextureLoader.load("static/images/logo/namedn8.png", setClampTexture.bind(name8));
+name8.position.set(-90, 19, -5);
+name8.rotation.set(0, Math.PI / 2, 0)
+name8.scale.set(8, 8, 8)
 //
 
 //9
@@ -190,7 +188,17 @@ name9.position.set(-90, 19, -5);
 name9.rotation.set(0, Math.PI / 2, 0)
 name9.scale.set(8, 8, 8)
 //
+//10
+logo10 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/logo/dn10.png", setClampTexture.bind(logo10));
+logo10.position.set(-35, 35, -69);
+logo10.scale.set(12, 12, 8)
 
+name10 = new PANOLENS.Tile(8, 0.8);
+PANOLENS.Utils.TextureLoader.load("static/images/logo/namedn10.png", setClampTexture.bind(name10));
+name10.position.set(5, 35, -70);
+name10.scale.set(8, 8, 8)
+//
 
 //back
 back = new PANOLENS.Tile(6, 0.4);

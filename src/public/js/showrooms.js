@@ -158,28 +158,42 @@ videoScreen2_2.addEventListener('click-entity', function() {
 }
 
 function handleShowroom_4() {
+  showroom_4.add(logo4);
+  showroom_4.add(name4);
+  showroom_4.add(videoScreen)
+  showroom_4.add(popup_play)
   showroom_4.add(backr4);
   showroom_4.add(b_room_4);
 }
 
 function handleShowroom_5() {
+  showroom_5.add(logo5);
+  showroom_5.add(name5);
   showroom_5.add(backr5);
   showroom_5.add(b_room_5);
 }
 
 function handleShowroom_6() {
   showroom_6.add(backr6);
+  showroom_6.add(logoname6);
   showroom_6.add(b_room_6);
 }
 
 function handleShowroom_7() {
   showroom_7.add(backr7);
   showroom_7.add(b_room_7);
+  showroom_7.add(logo7);
+  showroom_7.add(name7);
+  showroom_7.add(videoScreen)
+  showroom_7.add(popup_play)
 }
 
+//phong 10
 function handleShowroom_8() {
   showroom_8.add(backr8);
   showroom_8.add(b_room_8);
+  showroom_8.add(logo10);
+  showroom_8.add(name10);
 }
 
 function handleShowroom_9() {
@@ -292,8 +306,56 @@ item_12.addEventListener("click",  function() {
   "/static/images/showrooms/items/item12_dn9.jpg", "https://www.w3schools.com/");
 }); 
 }
-
+//phong 8
 function handleShowroom_10() {
   showroom_10.add(backr10);
   showroom_10.add(b_room_10);
+
+  showroom_10.add(logo8);
+  showroom_10.add(name8);
+  showroom_10.add(videoScreen2)
+  showroom_10.add(popup_play2)
+  videoScreen2.addEventListener('click-entity', function() {
+    if (playVideo2 == false) {
+      popup_play2.dispose()
+    }
+    else {
+      popup_play2 = new PANOLENS.EmptyPanorama();
+      title_popup_play2 = new PANOLENS.Tile(15, 8);
+        PANOLENS.Utils.TextureLoader.load('static/images/play.png', setClampTexture.bind(title_popup_play2));
+        title_popup_play2.position.set(-54, 5, 30);
+        title_popup_play2.rotation.set(0, Math.PI / -1, 0)
+        title_popup_play2.addEventListener('click-entity', function() {
+          popup_play2.dispose()
+            play_video2()
+        });
+        popup_play2.add(title_popup_play2)
+        showroom_9.add(popup_play2)
+    }
+    play_video2()
+
+
+});
+showroom_10.add(videoScreen2_2)
+showroom_10.add(popup_play2_2)
+videoScreen2_2.addEventListener('click-entity', function() {
+  if (playVideo2_2 == false) {
+    popup_play2_2.dispose()
+  }
+  else {
+    popup_play2_2 = new PANOLENS.EmptyPanorama();
+    title_popup_play2_2 = new PANOLENS.Tile(15, 8);
+      PANOLENS.Utils.TextureLoader.load('static/images/play.png', setClampTexture.bind(title_popup_play2_2));
+      title_popup_play2_2.position.set(-54, 5, -30);
+      title_popup_play2_2.rotation.set(0, Math.PI / 50, 0)
+      title_popup_play2_2.addEventListener('click-entity', function() {
+        popup_play2_2.dispose()
+          play_video2_2()
+      });
+      popup_play2_2.add(title_popup_play2_2)
+      showroom_10.add(popup_play2_2)
+  }
+  play_video2_2()
+
+});
 }

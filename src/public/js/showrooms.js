@@ -23,10 +23,15 @@ function handlePopupItem(name, description, url, learn_more) {
 }
 
 function handleShowroom_1() {
-  showroom_1.add(itemr9_1);
-  showroom_1.add(itemr9_2);
-  showroom_1.add(itemr9_3);
-  showroom_1.add(itemr9_4);
+  showroom_1.add(itemr1_1);
+  showroom_1.add(itemr2_1);
+  showroom_1.add(itemr3_1);
+  showroom_1.add(itemr4_1);
+  showroom_1.add(itemr5_1);
+  showroom_1.add(itemr6_1);
+  showroom_1.add(itemr7_1);
+  showroom_1.add(itemr8_1);
+
   showroom_1.add(logo1);
   showroom_1.add(name1);
   showroom_1.add(videoScreen)
@@ -51,24 +56,11 @@ function handleShowroom_1() {
     play_video()
 
 });
-  itemr9_1.addEventListener("click", function() {
+  itemr1_1.addEventListener("click", function() {
      handlePopupItem("TH truemilk", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ex dicta maiores libero minus obcaecati iste optio, eius labore repellendus.",
      "/static/images/showrooms/items/item_1.png", "https://www.w3schools.com/");
   });
   
-  itemr9_2.addEventListener("click",  function() {
-    handlePopupItem("TH truemilk", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ex dicta maiores libero minus obcaecati iste optio, eius labore repellendus.",
-    "/static/images/showrooms/items/item_2.png", "https://www.w3schools.com/");
-  });
-  
-  itemr9_3.addEventListener("click",  function() {
-    handlePopupItem("TH truemilk", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ex dicta maiores libero minus obcaecati iste optio, eius labore repellendus.",
-    "/static/images/showrooms/items/item_3.png", "https://www.w3schools.com/");
-  });
-  itemr9_4.addEventListener("click",  function() {
-    handlePopupItem("TH truemilk", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ex dicta maiores libero minus obcaecati iste optio, eius labore repellendus.",
-    "/static/images/showrooms/items/item_3.png", "https://www.w3schools.com/");
-  });  
 }
 
 function handleShowroom_2() {

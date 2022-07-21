@@ -20,6 +20,50 @@ item_4.position.set(10, -1.5, 40);
 item_4.rotation.set(0, -Math.PI, 0)
 item_4.scale.set(8, 8, 8)
 
+item_5 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item5_dn9.jpg", setClampTexture.bind(item_5));
+item_5.position.set(-3, -1.5, 40);
+item_5.rotation.set(0, -Math.PI, 0)
+item_5.scale.set(8, 8, 8)
+
+item_6 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item6_dn9.jpg", setClampTexture.bind(item_6));
+item_6.position.set(-30, -1.5, 40);
+item_6.rotation.set(0, -Math.PI, 0)
+item_6.scale.set(8, 8, 8)
+
+item_7 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item7_dn9.jpg", setClampTexture.bind(item_7));
+item_7.position.set(24, -1.5, 40);
+item_7.rotation.set(0, -Math.PI, 0)
+item_7.scale.set(8, 8, 8)
+
+item_8 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item8_dn9.jpg", setClampTexture.bind(item_8));
+item_8.position.set(37, -1.5, 40);
+item_8.rotation.set(0, -Math.PI, 0)
+item_8.scale.set(8, 8, 8)
+
+item_9 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item9_dn9.jpg", setClampTexture.bind(item_9));
+item_9.position.set(-30, -1.5, -40);
+item_9.scale.set(8, 8, 8)
+
+item_10 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item10_dn9.jpg", setClampTexture.bind(item_10));
+item_10.position.set(24, -1.5, -40);
+item_10.scale.set(8, 8, 8)
+
+item_11 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item11_dn9.jpg", setClampTexture.bind(item_11));
+item_11.position.set(37, -1.5, -40);
+item_11.scale.set(8, 8, 8)
+
+item_12 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item12_dn9.jpg", setClampTexture.bind(item_12));
+item_12.position.set(-3, -1.5, -40);
+item_12.scale.set(8, 8, 8)
+
 //add name logo enterprise
 //1
 logo1 = new PANOLENS.Tile(1, 1);

@@ -31,7 +31,7 @@ function onProgressUpdate ( event ) {
     setTimeout(function(){
       loading.style.display = 'none';
       bar.style.width = 0;
-    }, 1);
+    }, 1500);
   }
 }
 

@@ -64,11 +64,20 @@ function handleShowroom_1() {
 }
 
 function handleShowroom_2() {
+  console.log('itemr2_1: ', itemr1_2)
   showroom_2.add(b_room_2);
   showroom_2.add(logo2);
   showroom_2.add(name2);
   showroom_2.add(backr2);
-
+  showroom_2.add(itemr1_2);
+  showroom_2.add(itemr2_2);
+  showroom_2.add(itemr3_2);
+  showroom_2.add(itemr4_2);
+  showroom_2.add(itemr5_2);
+  showroom_2.add(itemr6_2);
+  showroom_2.add(itemr7_2);
+  showroom_2.add(itemr8_2);
+  showroom_2.add(itemr9_2);
 }
 
 function handleShowroom_3() {
@@ -189,18 +198,18 @@ function handleShowroom_8() {
 }
 
 function handleShowroom_9() {
-  showroom_9.add(itemr9_1);
-  showroom_9.add(itemr9_2);
-  showroom_9.add(itemr9_3);
-  showroom_9.add(itemr9_4);
-  showroom_9.add(itemr9_5);
-  showroom_9.add(itemr9_6);
-  showroom_9.add(itemr9_7);
-  showroom_9.add(itemr9_8);
+  showroom_9.add(itemr1_9);
+  showroom_9.add(itemr2_9);
+  showroom_9.add(itemr3_9);
+  showroom_9.add(itemr4_9);
+  showroom_9.add(itemr5_9);
+  showroom_9.add(itemr6_9);
+  showroom_9.add(itemr7_9);
+  showroom_9.add(itemr8_9);
   showroom_9.add(itemr9_9);
-  showroom_9.add(itemr9_10);
-  showroom_9.add(itemr9_11);
-  showroom_9.add(itemr9_12);
+  showroom_9.add(itemr10_9);
+  showroom_9.add(itemr11_9);
+  showroom_9.add(itemr12_9);
 
   showroom_9.add(b_room_9);
   showroom_9.add(logo9);
@@ -251,49 +260,49 @@ videoScreen2_2.addEventListener('click-entity', function() {
   play_video2_2()
 
 });
-itemr9_1.addEventListener("click", function() {
+itemr1_9.addEventListener("click", function() {
   handlePopupItem("Ngọc trai Fresh water", "Chuỗi cổ Ngọc trai Love. <br>Đặc điểm chính: <br>- Ngọc trai Fresh water, hình dạng tròn đều <br>- Kích thước Ngọc: 9.0 mm <br>- Cấp độ Ngọc: 3A <br>- Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh <br>- Giá niêm yết: 11.200.000đ",
   "/static/images/showrooms/items/item1_dn9.jpg", "https://www.w3schools.com/");
 });
 
-itemr9_2.addEventListener("click",  function() {
+itemr2_9.addEventListener("click",  function() {
  handlePopupItem("Ngọc trai Fresh water", "Chuỗi cổ Ngọc trai Love. <br>Đặc điểm chính: <br>- Ngọc trai Fresh water, hình dạng tròn đều <br>- Kích thước Ngọc: 9.0 mm <br>- Cấp độ Ngọc: 3A <br>- Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh <br>- Giá niêm yết: 11.200.000đ",
  "/static/images/showrooms/items/item2_dn9.jpg", "https://www.w3schools.com/");
 });
 
-itemr9_3.addEventListener("click",  function() {
+itemr3_9.addEventListener("click",  function() {
  handlePopupItem("Ngọc trai Fresh water", "Chuỗi cổ Ngọc trai Love <br>Đặc điểm chính: <br>- Ngọc trai Fresh water, hình dạng tròn đều <br>- Kích thước Ngọc: 9.0 mm <br>- Cấp độ Ngọc: 3A <br>- Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh Giá niêm yết: 11.200.000đ","/static/images/showrooms/items/item3_dn9.jpg", "https://www.w3schools.com/");
 });
-itemr9_4.addEventListener("click",  function() {
+itemr4_9.addEventListener("click",  function() {
  handlePopupItem("Ngọc trai Fresh water", "Chuỗi cổ Ngọc trai Love <br>Đặc điểm chính: <br>- Ngọc trai Fresh water, hình dạng tròn đều <br>- Kích thước Ngọc: 9.0 mm <br>- Cấp độ Ngọc: 3A <br>- Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh Giá niêm yết: 11.200.000đ","/static/images/showrooms/items/item4_dn9.jpg", "https://www.w3schools.com/");
 });
-itemr9_5.addEventListener("click",  function() {
+itemr5_9.addEventListener("click",  function() {
   handlePopupItem("Ngọc trai Fresh water", "Chuỗi cổ Ngọc trai Love <br>Đặc điểm chính: <br>- Ngọc trai Fresh water, hình dạng tròn đều <br>- Kích thước Ngọc: 9.0 mm <br>- Cấp độ Ngọc: 3A <br>- Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh Giá niêm yết: 11.200.000đ",
   "/static/images/showrooms/items/item5_dn9.jpg", "https://www.w3schools.com/");
  }); 
-itemr9_6.addEventListener("click",  function() {
+ itemr6_9.addEventListener("click",  function() {
   handlePopupItem("Chuỗi Ngọc trai 10 IN 1","Ngọc trai Freshwater, hình dạng gần tròn <br>- Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh. Tuyển chọn và xâu chuỗi theo yêu cầu. <br>- Kích thước Ngọc: 7 <br>- 7.5mm, cấp độ 2A - 3A. <br>- Chuỗi dài 150cm, có thể mix-match thành 10 kiểu khác nhau khi đeo. Kỹ thuật thắt nút từng viên chống cọ sát và co dãn sợi dây.<br>- Bảo hành 5 năm.Giá: 13.500.000VNĐ",
   "/static/images/showrooms/items/item6_dn9.jpg", "https://www.w3schools.com/");
 }); 
-itemr9_7.addEventListener("click",  function() {
+itemr7_9.addEventListener("click",  function() {
   handlePopupItem("Chuỗi Ngọc trai Glory", "Ngọc trai Freshwater, hình dạng bầu dục, hình trứng và ngẫu nhiên. <br>- Màu sắc: Phối màu độc đáo, sang trọng. Trắng, hồng cam, hồng tím và màu đen.<br>- Kích thước Ngọc: 6 - 9mm, cấp độ 3A <br>- Đính khóa Bạc 925 phủ bạch kim cao cấp, thắt nút từng viên chống cọ sát và co dãn.<br>- Bảo hành 5 năm.<br>- Giá: 16.500.000VNĐ","/static/images/showrooms/items/item7_dn9.jpg", "https://www.w3schools.com/");
 }); 
-itemr9_8.addEventListener("click",  function() {
+itemr8_9.addEventListener("click",  function() {
   handlePopupItem("Chuỗi Ngọc trai đôi Pearltalk:","<br>- Ngọc trai Freshwater, hình gần tròn. <br>- Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh. Tuyển chọn và xâu chuỗi theo yêu cầu.<br>- Kích thước Ngọc: 7.5 - 8.5mm, cấp độ 3A<br>- Chuỗi đeo được 5 kiểu khác nhau, phù hợp đeo nhiều loại trang phục. Kỹ thuật thắt nút từng viên chống cọ sát và co dãn sợi dây.<br>- Khóa Bạc 925 phủ bạch kim cao cấp.- Bảo hành 5 năm. Giá: 15.400.000đ","/static/images/showrooms/items/item8_dn9.jpg", "https://www.w3schools.com/");
 }); 
 itemr9_9.addEventListener("click",  function() {
   handlePopupItem("Bộ Ngọc trai Unique","<br>- Ngọc trai Freshwater, hình dạng tròn đều.<br>- Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh. Tuyển chọn và thiết kế theo yêu cầu.<br>- Kích thước Ngọc: 9 - 10mm, cấp độ 4A.<br>- Chất liệu: Vàng 18K 750 đính đá pha lê hoặc đính kim cương tấm theo sở thích.<br>- Bảo hành 5 năm.Giá: 35.200.000VNĐ",
   "/static/images/showrooms/items/item9_dn9.jpg", "https://www.w3schools.com/");
 }); 
-itemr9_10.addEventListener("click",  function() {
+itemr10_9.addEventListener("click",  function() {
   handlePopupItem("Bộ Ngọc trai The Fire","<br>- Ngọc trai Freshwater, hình dạng tròn đều.<br>- Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh. Tuyển chọn và thiết kế theo yêu cầu.<br>- Kích thước Ngọc: 9 - 10mm, cấp độ 4A.<br>- Chất liệu: Vàng 18K 750 đính đá pha lê hoặc đính kim cương tấm theo sở thích.<br>- Bảo hành 5 năm.Giá: 34.300.000VNĐ",
   "/static/images/showrooms/items/item10_dn9.jpg", "https://www.w3schools.com/");
 }); 
-itemr9_11.addEventListener("click",  function() {
+itemr11_9.addEventListener("click",  function() {
   handlePopupItem("Bộ Ngọc trai Elizabeth","<br>- Ngọc trai Freshwater, hình dạng tròn đều.<br>- Màu sắc: Trắng, hồng cam, hồng tím, đen ánh xanh. Tuyển chọn và thiết kế theo yêu cầu.<br>- Kích thước Ngọc: 9 - 10mm, cấp độ 4A.<br>- Chất liệu: Vàng 18K 750 hoặc Vàng trắng 18K 750, đính đá pha lê hoặc đính kim cương tấm theo sở thích.<br>- Bảo hành 5 năm.Giá: 33.200.000VNĐ",
   "/static/images/showrooms/items/item11_dn9.jpg", "https://www.w3schools.com/");
 }); 
-itemr9_12.addEventListener("click",  function() {
+itemr12_9.addEventListener("click",  function() {
   handlePopupItem("Bộ Ngọc trai Hoa Kiều Mạch","<br>- Ngọc trai biển South sea hình dạng tròn đều.<br>- Màu sắc: Vàng ánh kim sang trọng. Tuyển chọn và thiết kế theo yêu cầu.<br>- Kích thước Ngọc: 10 - 11mm, cấp độ 3A.<br>- Chất liệu: Vàng 18K 750 đính đá pha lê hoặc đính kim cương tấm theo sở thích.<br>- Bảo hành 5 năm.Giá: 76.100.000VNĐ",
   "/static/images/showrooms/items/item12_dn9.jpg", "https://www.w3schools.com/");
 }); 

@@ -40,9 +40,62 @@ itemr8_1.position.set(54, -27, -150);
 itemr8_1.scale.set(8, 8, 8)
 
 
-// ITEMS: ROOM2
+// ITEMS: ROOM2 (x: +- 66, y: , z:+- 10)
+// half-right
+itemr1_2 = new PANOLENS.Tile(3, 3);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item1_dn9.jpg", setClampTexture.bind(itemr1_2));
+itemr1_2.position.set(-1, 35, -150);
+// itemr2_1.rotation.set(0, Math.PI, 0);
+itemr1_2.scale.set(8, 8, 8)
 
+itemr2_2 = new PANOLENS.Tile(3, 3);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item1_dn9.jpg", setClampTexture.bind(itemr2_2));
+itemr2_2.position.set(65, 35, -140);
+itemr2_2.rotation.set(0, -Math.PI/6, 0);
+itemr2_2.scale.set(8, 8, 8)
 
+itemr3_2 = new PANOLENS.Tile(3, 3);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item1_dn9.jpg", setClampTexture.bind(itemr3_2));
+itemr3_2.position.set(148, 37, -125);
+itemr3_2.rotation.set(0, -Math.PI/3, 0);
+itemr3_2.scale.set(8, 8, 8)
+
+itemr4_2 = new PANOLENS.Tile(3.5, 3.5);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item1_dn9.jpg", setClampTexture.bind(itemr4_2));
+itemr4_2.position.set(240, 42, -60);
+itemr4_2.rotation.set(0, -Math.PI/2.5, 0);
+itemr4_2.scale.set(8, 8, 8)
+
+itemr5_2 = new PANOLENS.Tile(4.5, 4.5);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item1_dn9.jpg", setClampTexture.bind(itemr5_2));
+itemr5_2.position.set(300, 52, 57);
+itemr5_2.rotation.set(0, -Math.PI/2, 0);
+itemr5_2.scale.set(8, 8, 8)
+
+// left-right
+itemr6_2 = new PANOLENS.Tile(3, 3);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item1_dn9.jpg", setClampTexture.bind(itemr6_2));
+itemr6_2.position.set(-65, 35, -140);
+itemr6_2.rotation.set(0, Math.PI/6, 0);
+itemr6_2.scale.set(8, 8, 8)
+
+itemr7_2 = new PANOLENS.Tile(3, 3);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item1_dn9.jpg", setClampTexture.bind(itemr7_2));
+itemr7_2.position.set(-148, 37, -125);
+itemr7_2.rotation.set(0, Math.PI/3, 0);
+itemr7_2.scale.set(8, 8, 8)
+
+itemr8_2 = new PANOLENS.Tile(3.5, 3.5);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item1_dn9.jpg", setClampTexture.bind(itemr8_2));
+itemr8_2.position.set(-240, 42, -60);
+itemr8_2.rotation.set(0, Math.PI/2.5, 0);
+itemr8_2.scale.set(8, 8, 8)
+
+itemr9_2 = new PANOLENS.Tile(4.5, 4.5);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item1_dn9.jpg", setClampTexture.bind(itemr9_2));
+itemr9_2.position.set(-300, 52, 57);
+itemr9_2.rotation.set(0, Math.PI/2, 0);
+itemr9_2.scale.set(8, 8, 8)
 
 // ITEMS: ROOM3
 
@@ -63,71 +116,71 @@ itemr8_1.scale.set(8, 8, 8)
 
 
 // ITEMS: ROOM9
-itemr9_1 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item1_dn9.jpg", setClampTexture.bind(itemr9_1));
-itemr9_1.position.set(-16.5, -1.5, -40);
-itemr9_1.scale.set(8, 8, 8)
+itemr1_9 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item1_dn9.jpg", setClampTexture.bind(itemr1_9));
+itemr1_9.position.set(-16.5, -1.5, -40);
+itemr1_9.scale.set(8, 8, 8)
 
-itemr9_2 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item2_dn9.jpg", setClampTexture.bind(itemr9_2));
-itemr9_2.position.set(10, -1.5, -40);
-itemr9_2.scale.set(8, 8, 8)
+itemr2_9 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item2_dn9.jpg", setClampTexture.bind(itemr2_9));
+itemr2_9.position.set(10, -1.5, -40);
+itemr2_9.scale.set(8, 8, 8)
 
-itemr9_3 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item3_dn9.jpg", setClampTexture.bind(itemr9_3));
-itemr9_3.position.set(-16.5, -1.5, 40);
-itemr9_3.rotation.set(0, -Math.PI, 0)
-itemr9_3.scale.set(8, 8, 8)
+itemr3_9 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item3_dn9.jpg", setClampTexture.bind(itemr3_9));
+itemr3_9.position.set(-16.5, -1.5, 40);
+itemr3_9.rotation.set(0, -Math.PI, 0)
+itemr3_9.scale.set(8, 8, 8)
 
-itemr9_4 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item4_dn9.jpg", setClampTexture.bind(itemr9_4));
-itemr9_4.position.set(10, -1.5, 40);
-itemr9_4.rotation.set(0, -Math.PI, 0)
-itemr9_4.scale.set(8, 8, 8)
+itemr4_9 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item4_dn9.jpg", setClampTexture.bind(itemr4_9));
+itemr4_9.position.set(10, -1.5, 40);
+itemr4_9.rotation.set(0, -Math.PI, 0)
+itemr4_9.scale.set(8, 8, 8)
 
-itemr9_5 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item5_dn9.jpg", setClampTexture.bind(itemr9_5));
-itemr9_5.position.set(-3, -1.5, 40);
-itemr9_5.rotation.set(0, -Math.PI, 0)
-itemr9_5.scale.set(8, 8, 8)
+itemr5_9 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item5_dn9.jpg", setClampTexture.bind(itemr5_9));
+itemr5_9.position.set(-3, -1.5, 40);
+itemr5_9.rotation.set(0, -Math.PI, 0)
+itemr5_9.scale.set(8, 8, 8)
 
-itemr9_6 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item6_dn9.jpg", setClampTexture.bind(itemr9_6));
-itemr9_6.position.set(-30, -1.5, 40);
-itemr9_6.rotation.set(0, -Math.PI, 0)
-itemr9_6.scale.set(8, 8, 8)
+itemr6_9 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item6_dn9.jpg", setClampTexture.bind(itemr6_9));
+itemr6_9.position.set(-30, -1.5, 40);
+itemr6_9.rotation.set(0, -Math.PI, 0)
+itemr6_9.scale.set(8, 8, 8)
 
-itemr9_7 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item7_dn9.jpg", setClampTexture.bind(itemr9_7));
-itemr9_7.position.set(24, -1.5, 40);
-itemr9_7.rotation.set(0, -Math.PI, 0)
-itemr9_7.scale.set(8, 8, 8)
+itemr7_9 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item7_dn9.jpg", setClampTexture.bind(itemr7_9));
+itemr7_9.position.set(24, -1.5, 40);
+itemr7_9.rotation.set(0, -Math.PI, 0)
+itemr7_9.scale.set(8, 8, 8)
 
-itemr9_8 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item8_dn9.jpg", setClampTexture.bind(itemr9_8));
-itemr9_8.position.set(37, -1.5, 40);
-itemr9_8.rotation.set(0, -Math.PI, 0)
-itemr9_8.scale.set(8, 8, 8)
+itemr8_9 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item8_dn9.jpg", setClampTexture.bind(itemr8_9));
+itemr8_9.position.set(37, -1.5, 40);
+itemr8_9.rotation.set(0, -Math.PI, 0)
+itemr8_9.scale.set(8, 8, 8)
 
 itemr9_9 = new PANOLENS.Tile(1, 1);
 PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item9_dn9.jpg", setClampTexture.bind(itemr9_9));
 itemr9_9.position.set(-30, -1.5, -40);
 itemr9_9.scale.set(8, 8, 8)
 
-itemr9_10 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item10_dn9.jpg", setClampTexture.bind(itemr9_10));
-itemr9_10.position.set(24, -1.5, -40);
-itemr9_10.scale.set(8, 8, 8)
+itemr10_9 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item10_dn9.jpg", setClampTexture.bind(itemr10_9));
+itemr10_9.position.set(24, -1.5, -40);
+itemr10_9.scale.set(8, 8, 8)
 
-itemr9_11 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item11_dn9.jpg", setClampTexture.bind(itemr9_11));
-itemr9_11.position.set(37, -1.5, -40);
-itemr9_11.scale.set(8, 8, 8)
+itemr11_9 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item11_dn9.jpg", setClampTexture.bind(itemr11_9));
+itemr11_9.position.set(37, -1.5, -40);
+itemr11_9.scale.set(8, 8, 8)
 
-itemr9_12 = new PANOLENS.Tile(1, 1);
-PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item12_dn9.jpg", setClampTexture.bind(itemr9_12));
-itemr9_12.position.set(-3, -1.5, -40);
-itemr9_12.scale.set(8, 8, 8)
+itemr12_9 = new PANOLENS.Tile(1, 1);
+PANOLENS.Utils.TextureLoader.load("static/images/showrooms/items/item12_dn9.jpg", setClampTexture.bind(itemr12_9));
+itemr12_9.position.set(-3, -1.5, -40);
+itemr12_9.scale.set(8, 8, 8)
 
 
 // ITEMS: ROOM10
